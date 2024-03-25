@@ -125,5 +125,57 @@
 //!  !==  not equal value or not equal type
 // console.log(!(!(2 != 2)))
 
+// - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - - 
+//!  >      greater than
+//!  <      less than
+//!  >=  greater than or equal to
+//!  <=  less than or equal to
 
 
+//!  &&  and  =>  и      ...ham    
+// ex:   1 == 1  &&  3 == 3  &&  5 == 5  =>  true
+//       1 == 2  &&  3 == 3  &&  5 == 5  =>  false
+//!  ||  or   =>  или    ... yoki ...
+// ex:   1 == 1  ||  3 == 2  ||  5 == 2  =>  true
+// ex:   1 == 2  ||  3 == 2  ||  5 == 2  =>  false
+//!  !  not  =>  не ... ... emas
+// ex:   1 != 1   =>  false
+//       1 != 2   =>  true
+
+//! typeof      Returns the type of a variable
+// ex:  typeof("John")   =>  string
+
+//! The maximum number of decimals is 17
+
+//! NaN       =>  is a 'not a number'
+//! parseInt(Number) => converts a number into Number() object
+// RU:                 преобразует строку в целое число
+// ------------------------------
+// let x = "dqwdqw"
+// let result = !isNaN(x)
+// console.log(result)
+// ------------------------------
+//! isNaN() => checks if the object inside paratneses 
+//            appears to not be a Number
+//            Returns a Boolean value that indicates whether 
+//            a value is the reserved value NaN (not a number)
+//          RU: возвращает логическое значение, указывающее,
+//              является ли значение зарезервированным значением NaN 
+//              (не число)
+// ex:   isNaN(10)     =>  false
+//       isNaN("qwe")  =>  true
+
+
+//! Division by 0 (zero) generates Infinity
+// Infinity is a number: typeof Infinity returns number
+
+
+//! .toFixed()      Returns a number written with a number of decimals
+// ex: 10.345.toFixed(2)  =>  10.35
+
+// 99.55.toFixed(1)     =>    '99.5'
+// 99.55.toFixed(2)     =>    '99.55'
+// 99.55.toFixed(3)     =>    '99.550'
+
+//!  .toPrecision()  Returns a number written with a specified length  
+//  ex: 10.345.toPrecision(2)  =>  10
