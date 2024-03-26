@@ -1,278 +1,137 @@
-// MODULES - МОДУЛИ - МОДУЛЬ
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// ОПИСАНИЕ ТЕМЫ:
-// script - является уже программой - файл - если он что-то исполняет уже является программой. 
-// console в GOOGLE так же является продолжением Java Script 
-// string + number = string
-// number + number = number
-// 0 не делиться =>     10 / 2  -  infinity 
-// 10 / 2 => делить на 2 
-// функция принимает в конце себя ()
-//  "5" + 5 => 55 - - - "Hello " + 5 => "Hello 5"
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// %  => остаток от деления/даёт проценты
-// 2 ** 2 - степень 2 умножает 2 раза 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// ++  => добавляет единицу
-// let x = 5  => ++x - сначало покажет результат потом само содержимое переменной x
-// let x = 5  => x++ - сначало покажет содержимое x а потом уже результат
-// --  => минусует единицу
-// let x = 5  => --x - сначало результат потом сам x  
-// let x = 5  => x-- - сначало x потом результат
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// == => проверяет true/false - равен ли ... этому ...
-// let x == 5
-// console.log(x == 5)  => true
-// console.log(x == "5")  => true
-// console.log(x == 10) => false
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// === => отличается от == тем что проверяет равен ли ... к ... и проверяет тип данных  
-// let x = 5
-// console.log(5 === "5")   
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// let = 5
-// console.log( x + 5) - х остаётся 5
-// console.log( x += 5) - += сохраняет x = 10
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// integer => 123 целое число
-// float => 123.623 - не целое число
-// complex = цифры + буквы 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// // .toFixed()
-// let number = 3.14159;
-// let result = number.toFixed(2); // Нужно указать, сколько значений показать после точки
-// console.log(result);
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// parse - анализировать - int - цифры
-
-// parseInt() => переводит "5" в число
-// parseInt() =>  "text" NaN - Not a number
-// parseInt() =>  "x1" - если сначала увидит число до текста выдаст number
-// parseInt() => let m = 123.314 - выдаст целое число 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-// eval() - обычный калькулятор
-// let calc = eval(" (100 - 1 + 10 - 9) / 10 ")
-// console.log(calc)
-
-// && - 1 не правильно FALSE
-// OR - 1 правильно TRUE
-//  1 != 1 => False 
-// 1 != 2 => True 
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// если там число мы хотим True взять
-// если там буквы мы хотим число взять
-// let x = "123"
-// console.log(!isNaN(x))
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-// console.log(isNaN("123")) => false - Число Not a number - даёт FALSE, потому что всё число
-// console.log(isNaN("a123")) => true - 
-
-
-// let a = "Hello World"
-// console.log(!isNaN(123))
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-
-
-
-
-
-
-
-
-
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-// Задания 
-// 2 числа - найдите наибольшее число
-// 3 числа - найдите наибольшее число
-
-// let x = 100
-// let c = 50
-
-// if ( x > c ) {
-//     console.log(x)
-// }
-// else {
-//     console.log(c)
-// }
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-// let q = 100
-// let w = 50
-// let r = 30
-
-// if ( q > w  && r > q ) { 
-//     console.log(r)
-//  }
-
-//  else if ( w > q &&  >  ) {
-//     console.log(r)
-//  }
-//  else {
-//     console.log()
-//  }
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-// function findLargestNumber(a, b, c) {
-//     if (a >= b && a >= c) {
-//       return a;
-//     } else if (b >= a && b >= c) {
-//       return b;
-//     } else {
-//       return c;
-//     }
-//   }
-
-//   let number1 = 10;
-//   let number2 = 20;
-//   let number3 = 15;
-  
-//   let largestNumber = findLargestNumber(number1, number2, number3);
-//   console.log("Самое большое число: " + largestNumber);
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-
-
-
-
-// String + Number == String
-// ex:   "Hello " + 5  => "Hello 5"
+// String + Number => String✅
+// console.log("Hello " + 5) => "Hello 5" 
 // -----------------------------------
-// Number + Number == Number
-// ex:    5 + 5  => 10
+// Number + Number => Number✅
+// console.log(5 + 5) // => 10
 // -----------------------------------
-// parseInt(...) =>  converts a string into a number
-//              RU:  преобразует строку в целое число
+
+// parseInt(...) =>  преобразует строку в целое число✅
 // console.log("5" + 5)  // =>   "55"
-// console.log(parseInt("5") + 5) //  =>   10
+// console.log(parseInt("5") + 5) // => 10
+// -----------------------------------
+
 // let a = "15"
 // let z = "z"
 // let x = "x1"
 // let b = "12b"
 // let m = 123.314
 
-// console.log(parseInt(a))  //  15    -> Number
-// console.log(parseInt(z))  //  Not A Number
-// console.log(parseInt(x))  //  Not A Number
-// console.log(parseInt(b))  //  12    -> Number
-// console.log(parseInt(m))  //  123   -> Number
+// console.log(parseInt(a))  //  15    -> Number✅
+// console.log(parseInt(z))  //  Not A Number✅
+// console.log(parseInt(x))  //  Not A Number✅
+// console.log(parseInt(b))  //  12    -> Number✅
+// console.log(parseInt(m))  //  123   -> Number✅
+
 // -----------------------------------
+// ✅
 // let x = 5
 // let a = typeof(x)
 // let b = typeof("x")
 // console.log(a)
 // console.log(b)
+
 // -----------------------------------
-// let x = 5
+
 // console.log("10a" - x)  // -> NaN  -> Not a Number
-// console.log("10"  - x)  // -> 5
-// console.log(parseInt("10a") - x)  // -> 5
-// Here JS tries to help by converting a string into number 
-// and then subtracting x from it
-// RU: Здесь JS пытается помочь, преобразовав строку в число
-//     и затем вычитая x из него
-// -----------------------------------
-// console.log(typeof(parseInt(parseInt("22")+parseInt("1b"))))
+// console.log("10"  - x)  // -> 5 => КОД РАБОТАЕТ ИЗ ЗА ТОГО ЧТО ТАМ НЕТ БУКВЫ. ЕСЛИ БУДЕТ БУКВА NaN
 
-// REMEMBER:  The code is read always from 
-//           top to bottom
-//           left to right
-//           from the middle to outside
-// RU: Код читается всегда сверху вниз
-//     слева направо
-//     из середины наружу
-// -----------------------------------
-// let x = 5
-// Evaluate -> Вычислить
+// console.log(parseInt("10a") - x)  // -> 5  => СНАЧАЛО ИДЕТ ЦИФРА ПОТОМ БУКВА ✅ ЕСЛИ БУДЕТ БУКВА ПОТОМ ЦИФРА ❌
+// Здесь JS пытается помочь, преобразовав строку в число и затем вычитая x из него
 
-// EVAL => is a calculator that takes a string and calculates it
-// RU: EVAL => это калькулятор, который берет строку и вычисляет ее
+// -----------------------------------
+
+// console.log(typeof(parseInt(parseInt("22")+parseInt("1b")))) ✅
+
+//     Код читается всегда сверху вниз ✅
+//     слева направо ✅
+//     С середины внаружу ✅
+
+// -----------------------------------
+
+// Evaluate -> Вычислить ✅
+// EVAL => это калькулятор, который берет строку и вычисляет ее
+
+// let x = 5 
+
 // let calc = eval("(100 - 1 + 10 - 9) / 10")
 // console.log(calc)
+
 // -----------------------------------
+
 // let x = 5
-// console.log(x ** 3) // 125   =>  5 * 5 * 5
-// console.log(2 ** 3) // 8     =>  2 * 2 * 2
+// console.log(x ** 3) // 125   =>  5 * 5 * 5✅
+// console.log(2 ** 3) // 8     =>  2 * 2 * 2✅
+
 // -----------------------------------
+
 // let x = 5
-// % => Modulus (Division Remainder)  =>  Остаток от деления
-// console.log(x / 2) // 2.5
-// console.log(x % 2) // 1
-// console.log(11 % 5) // 1
-// console.log(15 % 2) // 1
-// console.log(18 % 7) // 4
+// % => Modulus (Division Remainder)  =>  Остаток от деления ✅
+// console.log(x / 2) // 2.5✅
+// console.log(x % 2) // 1  ✅
+// console.log(11 % 5) // 1 ✅
+// console.log(15 % 2) // 1 ✅
+// console.log(18 % 7) // 4 ✅
+
 // -----------------------------------
+
 // let x = 5
-// x ++   // first it shows the original value of x, then adds 1
-// ++ x   // 
-// console.log(x++) // 5
-// console.log(x)   // 6
+// x ++   // сначала он показывает исходное значение x, затем добавляет 1 ✅
+// ++ x   //  сначала он добавляет 1 затем показывает исходное значение x ✅
+// console.log(x++) // 5 ✅
+// console.log(x)   // 6 ✅
 // =============
-// console.log(++x) // 6
-// console.log(x)   // 6
+// console.log(++x) // 6 ✅
+// console.log(x)   // 6 ✅
+
 // -----------------------------------
-// let x = 5
-// x --   // first it shows the original value of x, then subtructs 1
-// -- x   // 
-// console.log(x--) // 5
-// console.log(x)   // 4
+
+// let x = 5 
+// x --   // сначала он показывает исходное значение x, затем вычитает 1 ✅
+// -- x   // сначала он вычитает 1 затем показывает исходное значение x  ✅
+// console.log(x--) // 5 ✅
+// console.log(x)   // 4 ✅
 // =============
-// console.log(--x) // 4
+// console.log(--x) // 4 ✅
 // console.log(x)   // 4
+
 // -----------------------------------
+
 // let x = 5
-// console.log(x == 5)     // true
-// console.log(5 == "5")   // true
-// console.log(x == 10)    // false
-// console.log('a' == 'b')    // false
-// console.log('a' == 'a')    // true
+// console.log(x == 5)     // true ✅
+// console.log(5 == "5")   // true ✅
+// console.log(x == 10)    // false ✅
+// console.log('a' == 'b')    // false ✅
+// console.log('a' == 'a')    // true ✅
+
 // -----------------------------------
+
 // let x = 5
-// console.log(5 === "5")  // false
-// console.log(5 === 5)    // true
+// console.log(5 === "5")  // false ✅ => тут тип данных не подходит поэтому выдаёт false
+// console.log(5 === 5)    // true ✅ =>  тут подходит и значение и тип данных поэтому выдаёт true
+
 // -----------------------------------
+
 // let x = 5
-// console.log(x + 5)  // x == 10   (-, *, /, **, %) are the same
-// console.log(x)      // x == 5  
-// console.log(x += 5) // x == 10   (-=, *=, /=, **=, %=) are the same
-// console.log(x)      // x == 10  
+// console.log(x + 5)  // x == 10 ✅  (-, *, /, **, %) одинаковы 
+// console.log(x)      // x == 5  ✅  
+// console.log(x += 5) // x == 10 ✅  (-=, *=, /=, **=, %=) одинаковы
+// console.log(x)      // x == 10 ✅  
+
 // -----------------------------------
-//! integer  =>  целая цыфра  =>  int       =>  1
-//! float    =>  не целая цыфра  => float   =>  1.100
-//! +  Addition
-//! -  Subtraction
-//! *  Multiplication
-//! /  Division
+
+//! integer  =>  целая цыфра  =>  int       =>  1     ✅
+//! float    =>  не целая цыфра  => float   =>  1.100 ✅
+//! +  Добавление - Addition 
+//! -  Вычитание - Subtraction
+//! *  Умножение - Multiplication
+//! /  Разделение - Division
 //! **  Exponentiation (ES2016) => степень
-//! %  Modulus (Division Remainder)  =>  остаток
+//! %  Модуль (Остаток деления)  =>  остаток
 //! ++  Increment
 //! --  Decrement
-//! =    x = y         x = y
-//! +=    x += y     x = x + y
-//! -=    x -= y     x = x - y
+//! =    x = y         x = y     
+//! +=    x += y     x = x + y   
+//! -=    x -= y     x = x - y   
 //! *=    x *= y     x = x * y
 //! /=    x /= y     x = x / y
 //! %=    x %= y     x = x % y
@@ -284,3 +143,62 @@
 //!  !=  not equal
 //!  !==  not equal value or not equal type
 // console.log(!(!(2 != 2)))
+
+// - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - -  - - - 
+
+//!  >      greater than
+//!  <      less than
+//!  >=  greater than or equal to
+//!  <=  less than or equal to
+
+
+//!  &&  and  =>  и      ...ham    
+// ex:   1 == 1  &&  3 == 3  &&  5 == 5  =>  true
+//       1 == 2  &&  3 == 3  &&  5 == 5  =>  false
+//!  ||  or   =>  или    ... yoki ...
+// ex:   1 == 1  ||  3 == 2  ||  5 == 2  =>  true
+// ex:   1 == 2  ||  3 == 2  ||  5 == 2  =>  false
+//!  !  not  =>  не ... ... emas
+// ex:   1 != 1   =>  false
+//       1 != 2   =>  true
+
+//! typeof      Returns the type of a variable
+// ex:  typeof("John")   =>  string
+
+//! The maximum number of decimals is 17
+
+//! NaN       =>  is a 'not a number'
+//! parseInt(Number) => преобразует строку в целое число
+
+// ------------------------------
+
+// let x = "dqwdqw"
+// let result = !isNaN(x)
+// console.log(result)
+
+// ------------------------------
+
+//! isNaN() => возвращает логическое значение, указывающее,
+//              является ли значение зарезервированным значением NaN 
+//              (не число)
+// ex:   isNaN(10)     =>  false
+//       isNaN("qwe")  =>  true
+
+// ------------------------------
+
+//! Division by 0 (zero) generates Infinity
+// Infinity is a number: typeof Infinity returns number
+
+// ------------------------------
+
+//! .toFixed()      Returns a number written with a number of decimals
+// ex: 10.345.toFixed(2)  =>  10.35
+
+// 99.55.toFixed(1)     =>    '99.5'
+// 99.55.toFixed(2)     =>    '99.55'
+// 99.55.toFixed(3)     =>    '99.550'
+
+// ------------------------------
+
+//!  .toPrecision()  Returns a number written with a specified length  
+//  ex: 10.345.toPrecision(2)  =>  10
