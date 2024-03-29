@@ -188,7 +188,7 @@
 
 // -----------------------------
 
-// ! .toFixed()      Returns a number written with a number of decimals
+// ! .toFixed()   Округляет числа до точки 123.45
 // ex: 10.345.toFixed(2)  =>  10.35
 
 // 99.55.toFixed(1)     =>    '99.5'
@@ -196,6 +196,6 @@
 // 99.55.toFixed(3)     =>    '99.550'
 
 // -----------------------------
-
+// Нужен для того что-бы  манипуляции текста
 // !  .toPrecision()  Returns a number written with a specified length  
 //  ex: 10.345.toPrecision(2)  =>  10
