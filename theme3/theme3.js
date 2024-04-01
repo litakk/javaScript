@@ -166,3 +166,6 @@
 // console.log(a[0] + " " + a[a.length-1])
 
 // ========================================================
+
+let x = "ramiz"
+console.log(typeof("x").repeat(2))
