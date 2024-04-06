@@ -29,6 +29,7 @@
 
 // example;
 // if(2 == 2) { console.log("Positive")}
+// else { console.log("Negative") }
 
 // let answer = 2 == 2 // Positive
 // let answer = 1-2 // -1 Positive
@@ -124,8 +125,9 @@
 // Напишите логику, которая проверяет, начинается ли строка с определённого символа
 
 // let str = "$tring"
-// let symbol = "$"
+// let symbol = "$"                                                                                                                       
 // if (str.startsWith(symbol)) {console.log("True")}
 // else {console.log("False")}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
