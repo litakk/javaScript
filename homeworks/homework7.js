@@ -40,13 +40,11 @@ console.log(minNumber)
 // 5 - Задание
 // Создайте массив чисел. Найдите максимальное число (например, 12345), затем сложите каждую цифру в числе (например, 1 + 2 + 3 + 4 + 5 = 15)
 
-// let arrr = [12345]
-// let sp = arrr.toString().split("")
-// let maxNum = sp.sort((a,b) => b - a)
-// let res = maxNum[0] 
-
-// console.log(parseInt(sp))
+let arrr = [12345]
+let sp = arrr.toString().split("")
+let maxNum = sp.sort((a,b) => b - a)
+let res = maxNum[0] 
 
 
-// let t = eval(sp)
-// console.log(t)
+
+// console.log("result",t)
