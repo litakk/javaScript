@@ -4,7 +4,15 @@
 let arr = ["text1", "text2", "texttttt3"]
 arr.sort((a, b) => b.length - a.length)
 let longText = arr[0]
+
 console.log(longText) // Выведет "texttttt3"
+
+// 2 - вариант выполнения задачи:
+// let arra = ["text1", "text2", "texttttt3"]
+// arra.sort((a, b) => a.length - b.length)
+// let longText = arra[arra.length-1]
+
+// console.log(longText) // Выведет "texttttt3"
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
