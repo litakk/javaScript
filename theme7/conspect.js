@@ -63,9 +63,9 @@ console.log("В данном случае .pop() удаляет текст в к
 // arr.splice(starting index, what_to_delete, what_add_after_delete)
 
 let letters = ['a','b','c','d']
-// letters.splice(1,1)
-// letters.splice(2,2,2,2)
-letters.splice(2, 2+2 , 2)
+letters.splice(1,1) // начал с 1 индекса - затем удалил 1 индекс 
+letters.splice(2,2,2,2) // начал с 2 индекса - затем удалил 2 индекс - и добавил 2 двойки 
+letters.splice(2, 2+2 , 2) // начал с 2 индеса - затем удалил всё до 4 индекса - вместо всего добавил 2  
 
 // letters.splice(2, 1**999 , "1*999") // с 2 индекса начал, удалил 1 во 2 индексе, и добавил во 2 индекс string
 console.log(letters)
@@ -75,7 +75,7 @@ console.log(letters)
 // spread operator - распыляет элементы массива в массив
 
 let xt = [1,2,3, "Kamron"]
-console.log(...xt) // 1 2 3 - вытащит без массива 
+console.log("В данном случае ...xt вытащит все элементы с массива и покажет их", ...xt) // 1 2 3 - вытащит без массива 
 
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -84,15 +84,17 @@ console.log(...xt) // 1 2 3 - вытащит без массива
 // let z = [1,2,3, "Kamron"]
 // let = a [ ...x, ...y, ...z]
 // console.log(a)
-
+ 
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 let words = ["Bob", "John", "Alex", "Mike","Tom"]
 let numbers = [23, 11, 5, 99, 1, 10]
 
-console.log(words.sort()) // ставит по алфавиту
-// console.log(numbers.sort()) // берет только первые цифры 
-console.log(numbers.sort((a, b) => a - b)) // используется что бы поставить по порядку цифры
+console.log("В данном случае words.sort() собирает всё по алфавиту", words.sort()) // ставит по алфавиту
+
+console.log("В данном случае numbers.sort() берёт только первые цифры", numbers.sort()) // берет только первые цифры 
+
+console.log("В данном случае numbers.sort() собирает все числа по возрастанию",numbers.sort((a, b) => a - b)) // используется что бы поставить по порядку цифры
 
 
 
