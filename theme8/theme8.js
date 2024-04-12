@@ -57,13 +57,9 @@
  
 // let text = "Ramiz" 
 // let number = 3 
- 
-// let text = "Ramiz"
-// let number = 3
-
 // let result = ""
 // let spl_text = text.split("") 
 // spl_text.forEach((value) => {
 //     result += value.repeat(number)
 // })
-// console.log("Result:",result)
+// console.log("Result:", result)
