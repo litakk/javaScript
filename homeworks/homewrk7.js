@@ -46,13 +46,17 @@ console.log(minNumber)
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 // 5 - Задание
-// Создайте массив чисел. Найдите максимальное число (например, 12345), затем сложите каждую цифру в числе (например, 1 + 2 + 3 + 4 + 5 = 15)
+// Создайте массив чисел. Найдите максимальное число (например, 12345), 
+// затем сложите каждую цифру в числе (например, 1 + 2 + 3 + 4 + 5 = 15)
 
-let arrr = [12345]
-let sp = arrr.toString().split("")
-let maxNum = sp.sort((a,b) => b - a)
-let res = maxNum[0] 
+let numbs = [1,2,3,4,5,12345]
+let sortBigNum  = numbs.sort((a,b) => b - a)
+let findBigNum = sortBigNum[0]
+console.log(findBigNum)
 
-
-
-// console.log("result",t)
+res = 0
+let replaceBigNumbToString = String(findBigNum).split("")
+replaceBigNumbToString.forEach((value) => {
+res += parseInt(value)
+})
+console.log(`result:`, res)
