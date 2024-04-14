@@ -73,6 +73,8 @@
 // ✅
 //  split()  =>  разделяет текст на множество частей
 
+// split("") - даёт нам лист - []
+
 // let test = "Hello world"
 // let r = test.split(" ") // Разбил на 2 части Hello, world
 // let r = test.split("") // Разбил каждую букву на части H. e, l, l, o, w, o. r, l, d
