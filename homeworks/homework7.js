@@ -38,6 +38,7 @@ console.log(maxNumber) // Выведет 5
 
 // 4 - Задание
 // Напишите логику, которая находит самое маленькое число в массиве чисел
+
 let numbers2 = [1,2,3,4,5]
 numbers2.sort((a,b) => a - b)
 let minNumber = numbers2[0]

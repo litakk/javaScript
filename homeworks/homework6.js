@@ -16,7 +16,7 @@ if (a.length == 0) { console.log(`Пустая строка`)}
 else {console.log("Текст не пустой")}
 
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-// 3. Напишите функцию JavaScript для разделения строки и преобразования ее в массив слов.
+// 3. Напишите функцию JavaScript для разделения стрраоки и преобзования ее в массив слов.
 
 let text3 = "Robin Singh"
 let splitText2 = text3.split(" ")
@@ -41,8 +41,8 @@ console.log(res)
 
 // не смог :) 
 
-// let text5 = "Робин Сингх"
-// let leftText5 = text5.indexOf(" ") 
+// // let text5 = "Робин Сингх"
+// let leftText5 = text5.indexOf(" ") + 1  
 // let res2 = text5.slice(0, leftText5)
 // let middleText5 = 
 // console.log(res2)
@@ -93,7 +93,17 @@ console.log(uppCase)
 // console.log(swapcase('AaBbc'));
 // "aAbBC"
 
-// не смог :)
+// let str = 'AaBbc';
+// let swapped = "";
+
+// for (let i = 0; i < str.length; i++) {
+//   if (str[i] === str[i].toUpperCase()) {
+//     swapped += str[i].toLowerCase();
+//   } else {
+//     swapped += str[i].toUpperCase();
+//   }
+// }
+// console.log(swapped);
 
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // 11. Напишите функцию JavaScript для преобразования строки в верблюжий регистр.
@@ -116,7 +126,8 @@ console.log(uppCase)
 // "hello_world"
 
 let text12 = "hello-World"
-let ress = text12.replace(/-/, "_")
+let symbl = "-"
+let ress = text12.replace(/-/, symbl)
 console.log(ress)
 
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -164,7 +175,22 @@ console.log(resul)
 // "301st"
 // "402nd"
 
-// не смог :)
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// let numbers = [1,8,301,402]
+
+// let suffixes = ["th", "st", "nd", "rd"]
+
+// numbers.forEach((val, idx) => {
+//     let current = idx + 1
+//     let suffix = ""
+
+//     if (current > 3) { 
+//         suffix=suffixes[0]
+//     } else {
+//         suffix=suffixes[current]
+//     }
+// console.log(`${current+suffix} choise is ${val}`)
+// })
 
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // 16. Напишите функцию JavaScript для усечения строки, если она длиннее указанного количества символов.
