@@ -5,7 +5,9 @@
  
 let text = "Ramiz" 
 let number = 3 
+
 let result1 = ""
+
 let spl_text = text.split("") 
 spl_text.forEach((value) => {
     result1 += value.repeat(number)
@@ -16,7 +18,7 @@ console.log("Result:", result1)
 
 // TASK - 2
 
-// let colors = ("Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Vellow "I;
+// let colors = ("Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Vellow "I
 // let suffixes = ["th" "st","'nd" "rd"]
 // OUTPUT:
 // "1st choice is Blue."
@@ -27,7 +29,7 @@ console.log("Result:", result1)
 let colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Vellow "]
 let suffixes = ["th", "st", "nd", "rd"]
 
-colors.filter((val, idx) => {
+colors.forEach((val, idx) => {
     let current = idx + 1
     let suffix = ""
 
@@ -38,7 +40,6 @@ colors.filter((val, idx) => {
     }
 console.log(`${current+suffix} choise is ${val}`)
 })
-
 // С кем мы работает называется current
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -240,8 +241,66 @@ console.log(even)
 // не проходили OBJECT
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+// TASK 1 - EXTREME  
+// find two numbers that add up to target 
+// let numbers = [1, 22, 122, 11, 43, 23, 123]
+ 
+// let target = 44 
+// output is [0,4] => 1 + 43 => 44
+
+// = = = = = =
+
+let numbers = [1, 22, 122, 11, 43, 23, 123]
+let target = 44
+
+let result4 = []
+
+// взяли каждый элемент массива - то есть его значение у 1 forEach() 
+numbers.forEach((value, idx) => { 
+
+// обрезает массив с каждым индексом, если даём 0 индекс он даст 1, даём 1 он даст 2 и.т.д.
+numbers.slice(idx + 1).forEach((secondNumber, secondIndex) => { 
+// далее сравниваем: 1 + 22 равен ли 44, дальше работает так с каждым значением пока не дойдет до 43
+// в итоге когда будет равен 44 он добавит index`ы в новый массив result4
+if (value + secondNumber == target) {
 
 
+result4 = [idx, idx + 1 + secondIndex] } })
+})
+
+console.log(result4)
+// Вывод: [0, 4] => 1 + 43 => 44
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+// TASK 2 - EXTREME  
+// Напишите программу на JS, чтобы найти букву, которая чаще всего встречается в данной строке.
+// Если все числа уникальны, верните -1
+
+let str = "Hello, world!"
+let maxCount = 0
+let mostCommonChar = ''
+
+// Преобразуем строку в массив символов и пройдемся по каждому символу
+str.split('').forEach(char => {
+    // Игнорируем пробелы и знаки препинания
+    if (char !== ' ' && char !== ',' && char !== '!') {
+        // Подсчитываем количество повторений текущего символа в строке
+        let count = str.split('').filter(c => c === char).length
+        if (count > maxCount) { // Если это количество больше максимального
+            maxCount = count // Обновляем максимальное количество
+            mostCommonChar = char // Обновляем наиболее часто встречающийся символ
+        }
+    }
+})
+
+if (maxCount === 1) { // Если все символы уникальны
+    console.log(-1) // Возвращаем -1
+} else {
+    console.log(mostCommonChar) // Иначе возвращаем наиболее часто встречающийся символ
+}
 
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
