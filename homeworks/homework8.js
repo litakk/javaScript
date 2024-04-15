@@ -62,13 +62,15 @@ let result3 = arr.filter((value) => { // работает с каждым и о�
 // TASK - 4
 // Найти разницу между двумя массивами 
 
+// EXAMPLE - 1
+
 let z1 = [1, 2, 3]
 let x1 = [100, 2, 1, 10]
 
 let resul = []
 
 z1.forEach(val => {
-if (!x1.includes(val)) {
+if (!x1.includes(val)) { // если значения нет в x1 он добавляет его в result
 resul.push(val) }
 })
 x1.forEach(val => {
@@ -76,8 +78,12 @@ x1.forEach(val => {
     resul.push(val) }
 })
 console.log("Result: ", resul)
-// Output  ==>>  ["3", "10", "100"]
+// Output  ==>>  ["3", "100", "10"]
+
 // -------------------
+
+// EXAMPLE - 2
+
 resul = []
 z1 = [1, 2, 15]
 x1 = [11, 3, 4, 1, 2]
