@@ -3,7 +3,7 @@
 // Security, 2    => SSeecckkuurriittyy 
 // Cyber,    3    => CCCyyybbbeeerrr 
  
-let text = "Ramiz" 
+let text = "Cyber" 
 let number = 3 
 
 let result1 = ""
@@ -18,28 +18,27 @@ console.log("Result:", result1)
 
 // TASK - 2
 
-// let colors = ("Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Vellow "I
-// let suffixes = ["th" "st","'nd" "rd"]
+// let colors = ["Blue","Green","Red","Orange","Violet","Indigo","Yellow"]
+// let suffixes = ["th", "st", "nd", "rd"]
+
 // OUTPUT:
 // "1st choice is Blue."
 // "2nd choice is Green."
 // "3rd choice is Red."
 
-
-let colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Vellow "]
+let colors = ["Blue","Green","Red","Orange","Violet","Indigo","Yellow"]
 let suffixes = ["th", "st", "nd", "rd"]
 
-colors.forEach((val, idx) => {
-    let current = idx + 1
+colors.forEach((value,index) => {
+    let current = index + 1 // индекс считает не с 0 а с 1 
     let suffix = ""
 
-    if (current > 3) { 
-        suffix=suffixes[0]
-    } else {
-        suffix=suffixes[current]
-    }
-console.log(`${current+suffix} choise is ${val}`)
-})
+    if(current > 3) { // тут индексы уже с 1 2 3 итд.. если больше 3 индекса(Orange) 
+        suffix = suffixes[0] // все индексы больше 3 получают - th 
+    } else { suffix = suffixes[current] } // тут получают - st, nd, rd - до 3 индекса 
+    console.log( `${current+suffix} choise is ${value}` ) // current начался с 1 индекса - suffix принимает параметры с if else - value просто показывает значения
+})  
+
 // С кем мы работает называется current
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -51,10 +50,10 @@ console.log(`${current+suffix} choise is ${val}`)
 // 15, -22, 47
 
 const arr = [NaN, 0, 15, false, -22, undefined, 47, null]
-let result3 = arr.filter((value) => {
-    if (typeof(value) === 'number') // NaN - даёт number
-        if (!isNaN(value) && value != 0) {
-            console.log(value)
+let result3 = arr.filter((value) => { // работает с каждым и отделяет не нужное от нужного
+    if (typeof(value) === 'number') // тут проверяется если это число то он проходит проверку - - - NaN - даёт number
+        if (!isNaN(value) && value != 0) { // тут проверяет является ли значение числом, не является ли оно NaN и не равен 0 то он проходит проверку 
+            console.log(value) // в итоге покажето только то что прошло все проверки а именно [15, -22, 47]
         }
 })
 
