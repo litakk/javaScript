@@ -8,8 +8,7 @@ let number = 3
 
 let result1 = ""
 
-let spl_text = text.split("") 
-spl_text.forEach((value) => {
+text.split("").forEach((value) => {
     result1 += value.repeat(number)
 })
 console.log("Result:", result1)
@@ -205,17 +204,6 @@ let text0 = "This is 2nd task for 3rd dat of 30 days of JavaScript"
 let evens = []
 let odds = []
 
-// text0.split("").forEach(l => {
-//     if (!isNaN(l) && l != " ") {
-//         if (parseInt(l) % 2 == 0) {
-//             evens.push(parseInt(l))
-//         } else {
-//             odds.push(parseInt(l))
-//         }
-//     }
-// })
-// console.log(`Чётные ${evens} ... \n Нечетные ${odds}`)
-
 text0.split("").forEach(l => {
     if (!isNaN(l) && l != " ") {
         if (parseInt(l) % 2 == 0) {
@@ -225,13 +213,7 @@ text0.split("").forEach(l => {
         }
     }
 })
-console.log(`Чётные ${evens} ... \n Нечётные ${odds}`)
-
-
-
-
-
-
+console.log(`Чётные ${evens} ... \n Нечетные ${odds}`)
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
@@ -241,26 +223,34 @@ console.log(`Чётные ${evens} ... \n Нечётные ${odds}`)
 let numb = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 let even = []
 
-// numb.forEach(l => {
-//     if (!isNaN(l) && l != " ") 
-//     { if (parseInt(l) % 2 == 0) {even.push(parseInt(l))} }
-// })
-// console.log(`Чётные ${even}`)
-
 numb.forEach(value => {
 if (!isNaN(value) && value != " ")
 { if (parseInt(value) % 2 == 0) {even.push(parseInt(value))}}
 })
-console.log(even)
+console.log(`Чётные ${even}`)
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-// TASK - 12
+// TASK - 12 - похоже на EXTREME 1
 // Создайте функцию, которая принимает текст и возвращает true, 
 // если в нём есть две или более одинаковые буквы, которые находятся 
 // рядом друг с другом, а в противном случае false
 
-// не проходили OBJECT
+// "Hello" => true
+// "Helo" => false
+
+const text12 = "Hello";
+
+let result12 = false;
+
+text12.toLowerCase().split('').forEach((char, index, array) => {
+    if (char == array[index + 1]) {
+        result12 = true;
+    }
+});
+
+console.log(result12); // true, так как есть две "l"
+
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
