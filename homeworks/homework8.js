@@ -205,6 +205,17 @@ let text0 = "This is 2nd task for 3rd dat of 30 days of JavaScript"
 let evens = []
 let odds = []
 
+// text0.split("").forEach(l => {
+//     if (!isNaN(l) && l != " ") {
+//         if (parseInt(l) % 2 == 0) {
+//             evens.push(parseInt(l))
+//         } else {
+//             odds.push(parseInt(l))
+//         }
+//     }
+// })
+// console.log(`Чётные ${evens} ... \n Нечетные ${odds}`)
+
 text0.split("").forEach(l => {
     if (!isNaN(l) && l != " ") {
         if (parseInt(l) % 2 == 0) {
@@ -214,7 +225,13 @@ text0.split("").forEach(l => {
         }
     }
 })
-console.log(`Чётные ${evens} ... \n Нечетные ${odds}`)
+console.log(`Чётные ${evens} ... \n Нечётные ${odds}`)
+
+
+
+
+
+
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
