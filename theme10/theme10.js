@@ -30,8 +30,8 @@
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-// ВСЁ БЕРЕТ
-// MAP => Перебирает массив и возвращает 
+// MAP - Перебирает массив и возвращает ВСЁ 
+// В ЛЮБОМ СЛУЧАЕ, ВЫХОД ТОЛЬКО СО ВСЕМИ ЭЛЕМЕНТАМИ МАССИВА.
 
 // let result = arr.map(value => { // ВОЗМЁТ ВСЁ ТО ЧТО НАХОДИТСЯ В МАССИВЕ
 //     result.push(value)
@@ -39,15 +39,13 @@
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-// REDUCE - берёт всё но из всех создаёт 1 значение
-// Аккумулятор - это то место где 
-// [].reduce((acc, next) => {})
+// REDUCE - берёт все элементы - можно делать фильтр
+// БЕРЁТ ВСЕ ЭЛЕМЕНТЫ И ВЫВОДИТ ИХ В ОДНО (плюсует/умножает/делит/и.т.д.)
+// accumulator - это значение, которое накапливает результат в каждой итерации. 
+// В начале выполнения оно равно начальному значению (в данном случае 0).
 
+// SYNTAX - [].reduce((acc, next) => { })
 
-// let arr = [1, 2, 3, 4, 5]
-// let result = arr.reduce((acc, next) => {
-//    return acc * next
-// })
 //  acc=1, next=2  =>   1*2   =>   2 
 //  acc=2, next=3  =>   2*3   =>   6
 //  acc=6, next=4  =>   6*4   =>   24
@@ -55,30 +53,43 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// words = ["apple", 'banana', 'cherry', 'blueberry', 'strawbarry']
-
-// let longest = words.reduce((acc, next) => {
-//     if (acc.length > next.length) {
-//         return acc
-//     } else {
-//         return next
-//     }
+// let arr = [1, 2, 3, 4, 5]
+// let result = arr.reduce((acc, next) => {
+//    return acc * next
 // })
 
-// console.log(longest)
+//  acc=1, next=2  =>   1*2   =>   2 
+//  acc=2, next=3  =>   2*3   =>   6
+//  acc=6, next=4  =>   6*4   =>   24
+//  acc=24, next=5  =>  24*5  =>   120
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-let words = ['apple', 'banana','charry', 'bluebarry','strawbarry']
+words = ["apple", 'banana', 'cherry', 'blueberry', 'strawbarry']
 
-let result = words.reduce((acc, next) => {
-    return acc + next.length
-}, 5)
+let longest = words.reduce((acc, next) => {
+    if (acc.length > next.length) {
+        return acc
+    } else {
+        return next
+    }
+})
+
+console.log(longest)
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// let words = ['apple', 'banana','charry', 'bluebarry','strawbarry']
+
+// let result = words.reduce((acc, next) => {
+//     return acc + next.length
+// }, 5)
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
 // SETS => ХРАНИТ ТОЛЬКО УНИКАЛЬНЫЕ ЗНАЧЕНИЯ И УДАЛЯЕТ ДУБЛИКАТЫ
 
+// Части от семейства Array() 
 // new Array()
 // new String()
 
@@ -104,12 +115,29 @@ console.log('DELETED:', set)
 set.delete(5)
 console.log('DEL NOT EXISTING ITEM:', set)
 
-
-
-
-
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
 // ЗАДАНИЯ В КОНЦЕ УРОКА:
+
+// ЗАДАНИЕ - 1
+// Найдите самое большое нечетное число и разделите его на цифры
+// затем удалите повторяющиеся цифры, чтобы каждое число было уникальным
+
+let max_odd = 0
+arr.forEach(num => {
+    if (num % 2 == 1 && max_odd < num) {
+        max_odd = num
+    }
+})
+let result = new Set(String(max_odd).split(""))
+console.log("Result: ", result)
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+// ЗАДАНИЕ - 2
+// Находим МАКСИМАЛЬНОЕ число из массива чисел
 
 // words = [1,2,3,4,5]
 
@@ -123,6 +151,10 @@ console.log('DEL NOT EXISTING ITEM:', set)
 
 // console.log('большое',longest)
 
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+// ЗАДАНИЕ - 3
+// Находим МИНИМАЛЬНОЕ число из массива чисел
 
 // words = [1,2,3,4,5]
 
@@ -136,7 +168,12 @@ console.log('DEL NOT EXISTING ITEM:', set)
 
 // console.log('маленькое', longest2)
 
-// 
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+// ЗАДАНИЕ - 4
+// Найдите самое большое нечетное число и разделите его на цифры
+// затем удалите повторяющиеся цифры, чтобы каждое число было уникальным
+
 // arr5 = [12345, 51324, 111123, 22222, 1451512] 
 
 // let longest5 = arr5.reduce((acc, next) => {
