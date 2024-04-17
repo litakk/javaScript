@@ -115,9 +115,11 @@ console.log('DELETED:', set)
 set.delete(5)
 console.log('DEL NOT EXISTING ITEM:', set)
 
+
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
 
 // ЗАДАНИЯ В КОНЦЕ УРОКА:
 
@@ -134,7 +136,7 @@ arr.forEach(num => {
 let result = new Set(String(max_odd).split(""))
 console.log("Result: ", result)
 
-// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 // ЗАДАНИЕ - 2
 // Находим МАКСИМАЛЬНОЕ число из массива чисел
@@ -199,5 +201,5 @@ console.log("Result: ", result)
 // }, 0)
 
 // let deleteDuplicate = new Set(String(longOdd).split(''))
-// console.log(deleteDuplicate) 
+// console.log('Удаляет дубликаты:'deleteDuplicate) 
 
