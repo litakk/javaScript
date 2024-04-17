@@ -131,9 +131,31 @@ console.log('DEL NOT EXISTING ITEM:', set)
 
 // console.log('маленькое', longest2)
 
+// 
+// arr5 = [12345, 51324, 111123, 22222, 1451512] 
+
+// let longest5 = arr5.reduce((acc, next) => {
+//     if (acc > next) {
+//         return acc
+//     } else {
+//         return next
+//     } 
+// })
+
+// console.log('самое большое число', longest2)
 
 
+// let set5 = new Set(arr5)
 
+// 111123 => [1, 1, 1, 1, 2, 3] => [1,2,3]
+// arr5 = [12345, 51324, 111123, 22222, 1451512] 
 
+// let longOdd = arr5.reduce((acc, next) => {
+//     if (next % 2 !== 0 && next > acc) {
+//         return next
+//     } else { return acc }
+// }, 0)
 
+// let deleteDuplicate = new Set(String(longOdd).split(''))
+// console.log(deleteDuplicate) 
 
