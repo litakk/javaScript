@@ -1,3 +1,15 @@
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// 1. forEach((value,index,array) => { })
+// 2. filter((value,index) => { })
+// 3. find((value,index) => { })
+// 4. map((value,index) => { })
+// 5. reduce((acc, next) => { })
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
 // let arr = ['a','b','c']
 
 // FILTER - ТОЛЬКО ЧАСТЬ (КОТОРАЯ ПРОШЛА ПРОВЕРКУ)
@@ -53,13 +65,13 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-const numbers = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5]
 
 const sum = numbers.reduce((accumulator, currentValue) => {
-  return accumulator + currentValue;
-}, 0);
+  return accumulator + currentValue
+}, 0)
 
-console.log(sum); // Выведет: 15 (сумма всех элементов массива)
+console.log(sum) // Выведет: 15 (сумма всех элементов массива)
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -67,6 +79,7 @@ console.log(sum); // Выведет: 15 (сумма всех элементов 
 // let result = arr.reduce((acc, next) => {
 //    return acc * next
 // })
+// console.log(result)
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -77,17 +90,28 @@ console.log(sum); // Выведет: 15 (сумма всех элементов 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-words = ["apple", 'banana', 'cherry', 'blueberry', 'strawbarry']
+// words = ["apple", 'banana', 'cherry', 'blueberry', 'strawbarry']
+
+// let longest = words.reduce((acc, next) => {
+//     if (acc.length > next.length) {
+//         return acc
+//     } else {
+//         return next
+//     }
+// })
+
+// console.log(longest)
+
+
+let words = ["apple", "banana", "cherry", "blueberry", "strawbarry"]
 
 let longest = words.reduce((acc, next) => {
-    if (acc.length > next.length) {
+    if (acc.length > next.length ) {
         return acc
     } else {
         return next
     }
 })
-
-console.log(longest)
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -114,14 +138,14 @@ console.log(set) // Set { 1, 2, 3 }
 
 // ADD TO SET => ДОБАВЛЯЕТ - НУЖНО ИМЕТЬ ВВИДУ ЧТО ОН НЕ ДОБАВЛЯЕТ ЕСЛИ ТАМ УЖЕ ЕСТЬ ЭТО ЗНАЧЕНИЕ
 
-set.add(6)
+set.add(6) // удаляет не по индекс`у
 set.add(4)
 console.log(set)
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // REMOVE FROM SET
-set.delete(3)
+set.delete(3) // удаляет не по индекс`у
 console.log('DELETED:', set)
 
 set.delete(5)
