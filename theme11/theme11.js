@@ -9,8 +9,11 @@ let test = "Hello World"
 console.log(test)
 
 // ________________ undefined & null _____________________
-// undefined -> не определено
-// null      -> пусто
+// undefined -> не определено = возникает когда переменная пустая
+// null      -> пусто = когда мы сами создаём null => let a = null
+
+// if (undefined) {} // НЕГАТИВ => этот код не прочитается
+// if () {} // прочитается
 
 // -----------------------------------------------------
 // if ({}) {
@@ -40,13 +43,13 @@ console.log(test)
 //   ? ==> if     
 //   : ==> else
 //   
-//   is used when the first value is true
+//   используется когда первое значение правдивое
 // --------------------------------------------
-//   || (OR) -> is used when the first value is true
-//          undefined, null, 0, ''
+//   || (OR) - приходит на замену если значение негативное - console.log(x || "does not exist")
+//   undefined, null, 0, ''
 // --------------------------------------------
-//   ?? (Nullish Coalescing) -> null или undefined
-//          is used when the first value is null or undefined
+//   ?? -> null или undefined
+//   всё остольное ?? даёт true
 // let x
 // console.log(x ?? "does not exist")
 // --------------------------------------------
@@ -60,16 +63,25 @@ console.log(test)
 //                           console.log(a()) 
 // ...
 // __________________ Error Status Codes __________________
-// 400 - Bad Request            => Неверный запрос
-// 401 - Unauthorized           => Не авторизован
-// 403 - Forbidden              => Запрещено
-// 404 - Not Found              => Не найдено
-// 500 - Internal Server Error  => Внутренняя ошибка сервера
-// 503 - Service Unavailable    => Сервис недоступен
+// 400 - Bad Request           => Неверный запрос
+// 401 - Unauthorized          => Не авторизован
+// 403 - Forbidden             => Запрещено
+// 404 - Not Found             => Не найдено
+// 500 - Internal Server Error => Внутренняя ошибка сервера
+// 503 - Service Unavailable   => Сервис недоступен
 
 // ___________________ try & catch _________________________
-// It is used to handle errors
-// RU: Используется для обработки ошибок
+// Используется для обработки ошибок
+
+
+
+console.log("Started...")
+console.log(a)
+console.log("Continue")
+
+
+
+
 
 // try () {
     // code
@@ -87,13 +99,12 @@ console.log(test)
 // }
 // console.log("Continue...")
 
+
+
 // ____________________ throw ________________________________
 // throw  => throw new Error('Message')
 
-// Is used to throw an error when something goes wrong
-// we use it in order to create our own rules for our code
-//          ------------------
-// RU: Мы используем throw, чтобы создать свои 
+// Мы используем throw, чтобы создать свои 
 // собственные правила для нашего кода
 // function test(par) {
 //     if (typeof(par) != 'number') {
@@ -106,8 +117,7 @@ console.log(test)
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-// ask 5 numbers from client and ask them to separate it by comma
-// RU: запросить 5 чисел у пользователя и попросить его их разделить запятой
+// запросить 5 чисел у пользователя и попросить его их разделить запятой
 let answer = prompt("Введите 5 чисел и разделите с помощью запятых: ")
 if (!answer.includes(",")) {
     console.log("Запятых нет")
