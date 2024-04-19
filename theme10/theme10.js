@@ -53,10 +53,22 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+
+console.log(sum); // Выведет: 15 (сумма всех элементов массива)
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 // let arr = [1, 2, 3, 4, 5]
 // let result = arr.reduce((acc, next) => {
 //    return acc * next
 // })
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 //  acc=1, next=2  =>   1*2   =>   2 
 //  acc=2, next=3  =>   2*3   =>   6
