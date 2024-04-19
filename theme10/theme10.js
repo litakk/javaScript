@@ -46,7 +46,7 @@
 // В ЛЮБОМ СЛУЧАЕ, ВЫХОД ТОЛЬКО СО ВСЕМИ ЭЛЕМЕНТАМИ МАССИВА.
 
 // let result = arr.map(value => { // ВОЗМЁТ ВСЁ ТО ЧТО НАХОДИТСЯ В МАССИВЕ
-//     result.push(value)
+//     result.push(value) // ПРОСТО ПОКАЖЕТ ВСЕ ЭЛЕМЕНТЫ МАССИВА
 // })
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -67,10 +67,9 @@
 
 const numbers = [1, 2, 3, 4, 5]
 
-const sum = numbers.reduce((accumulator, currentValue) => {
-  return accumulator + currentValue
+const sum = numbers.reduce((acc, next) => {
+  return acc + next
 }, 0)
-
 console.log(sum) // Выведет: 15 (сумма всех элементов массива)
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -124,8 +123,13 @@ let longest = words.reduce((acc, next) => {
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
 // SETS => ХРАНИТ ТОЛЬКО УНИКАЛЬНЫЕ ЗНАЧЕНИЯ И УДАЛЯЕТ ДУБЛИКАТЫ
+// Что-бы создать новый SET:
+// let set = new Set(variable)
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // Части от семейства Array() 
+// Set { 1, 2, 3 }
 // new Array()
 // new String()
 

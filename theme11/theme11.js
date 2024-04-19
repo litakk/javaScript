@@ -1,5 +1,12 @@
 // "use strict" // строгий режим
 
+// не формальный => выдаёт ошибки - test => не сущ 
+test = "Hello World"
+console.log(test)
+
+// формальный => не выдаёт ошибки - правильно
+let test = "Hello World"
+console.log(test)
 
 // ________________ undefined & null _____________________
 // undefined -> не определено
