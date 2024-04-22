@@ -300,3 +300,29 @@ console.log(DeleteLastElement())
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
+// INTERMEDIATE LEVEL
+
+// 22 - Напишите логику, которая находит самую длинную строку в массиве строк
+
+function maxStr() {
+ let array = ["Min","Middle","Maximum"]   
+    array.sort((a,b) => b.length - a.length)
+let result = array[0]  
+return result
+}
+console.log(maxStr())
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 23 - Напишите логику, которая находит самую короткую строку в массиве строк
+
+function minStr() {
+    let array = ["Min","Middle","Maximum"]   
+       array.sort((a,b) => a.length - b.length)
+   let result = array[0]  
+   return result
+   }
+   console.log(minStr())
+   
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
