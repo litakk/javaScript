@@ -452,12 +452,12 @@ console.log(FizzBuzz(15))
 // 34 - Напишите функцию, которая принимает массив чисел и находит второе наименьшее и второе наибольшее числа 
 
 function funct() {
-let array = [1, 2, 3, 4, 5]
-let sor = array.sort((a,b) => a - b)
-let m1 = sor[sor.length - 2]
-let m2 = sor[1]
-console.log(`Второе наименьшее число: ${m1}`)
-console.log(`Второе наибольшее число: ${m2}`)
+    let array = [1, 2, 3, 4, 5]
+    let sor = array.sort((a, b) => a - b)
+    let m1 = sor[sor.length - 2]
+    let m2 = sor[1]
+    console.log(`Второе наименьшее число: ${m1}`)
+    console.log(`Второе наибольшее число: ${m2}`)
 }
 funct()
 
@@ -483,13 +483,44 @@ console.log(fun("это пример строки, которую нужно п�
 // 35 - Напишите функцию, которая принимает строку в качестве параметра и находит самое длинное слово в строке
 
 function Param(param) {
-let spl = param.split(" ")
-let sorted = spl.sort((a, b) => b.length - a.length) 
-let result = sorted[0]
-return result
+    let spl = param.split(" ")
+    let sorted = spl.sort((a, b) => b.length - a.length)
+    let result = sorted[0]
+    return result
 }
 console.log(Param("Hello universe"))
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-// 36 - 
+// 36 - Напишите функцию, которая принимает строку в качестве параметра и подсчитает количество гласных в строке
+
+function vowels(test) {
+let vowels = 0
+
+test.split("").filter(val => {
+    if ("aioue".includes(val)) {
+        vowels += 1
+    } 
+})
+
+console.log("Гласные ", vowels)
+}
+vowels("Hello World")
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 37 - Напишите функцию, которая принимает два аргумента, строку и букву, и функция будет подсчитывать количество этой указанной буквы в строке
+
+function funcCount(str, letter) {
+    str = str.toLowerCase()
+    letter = letter.toLowerCase()
+    
+    let result = str.split('').filter(char => char === letter)
+    
+    return result.length
+}
+
+let text = "Hello world"
+let wordCount = "o"
+console.log("Количество букв '" + wordCount + "' в строке:", funcCount(text, wordCount))
+
