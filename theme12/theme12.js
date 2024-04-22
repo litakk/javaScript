@@ -160,7 +160,7 @@ console.log(conSymbol("hello", "$"))
 // 14 - Напишите логику, которая проверяет, начинается ли строка с определённого символа
 
 function startSymbol(str, symbol) {
-    return str.startsWith(symbol) ? `Строка начинается с символом ${symbol}` : `Строка не начинается с ${symbol}` 
+    return str.startsWith(symbol) ? `Строка начинается с символом ${symbol}` : `Строка не начинается с ${symbol}`
 }
 console.log(startSymbol("$hello", "$"))
 
@@ -176,17 +176,77 @@ console.log(startSymbol("$hello", "$"))
 // В остальных случаях выводите само число
 
 function FizzBuzz(num) {
-    if ( num % 3 == 0 && num % 5 == 0 ) {
+    if (num % 3 == 0 && num % 5 == 0) {
         return "FizzBuzz"
-    } else if ( num % 3 == 0 ) {
+    } else if (num % 3 == 0) {
         return "fizz"
-    } else if ( num % 5 == 0 ) {
+    } else if (num % 5 == 0) {
         return "buzz"
     }
-} 
+}
 console.log(FizzBuzz(15))
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 // 15 - POLINDROME
+
+function Polindrome(str) {
+    let reverseText = str.split('').reverse('').join('')
+    if (str == reverseText) { return "polindrome" }
+    else { return "not polindrome" }
+}
+console.log(Polindrome("madam"))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 16 - PRIME NUMBER (простое число) - EASIEST LEVEL 
+// У вас есть число между 1-20. Проверьте, это число или нет.
+// Простое число это - всегда больше 1 и делится без остатка только на себя или на 1
+// НАПРИМЕР: 3, 5, 7, 13 ...
+
+// function isPrime(num) {
+//     if (num <= 1) {
+//         return false;
+//     }
+//     if (num === 2) {
+//         return true;
+//     }
+//     if (num % 2 === 0) {
+//         return false;
+//     }
+//     if (num === 3 || num === 5 || num === 7 || num === 11 || num === 13 || num === 17 || num === 19) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// // Проверяем числа от 1 до 20
+// for (let i = 1; i <= 20; i++) {
+//     console.log(`${i} - ${isPrime(i) ? "простое число" : "не простое число"}`);
+// }
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 17 - Создайте массив с 4 элементами. Выведите в консоль второй элемент массива
+
+function Arr(array) {
+    return array[1]
+}
+console.log(Arr(["One", "Two", "Three", "Four"]))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 18 - Создайте массив с 5-ю числами. Получите первое с конца число и проверьте его на четность. Выведите результат в консоль
+
+function funcArr(array) {
+    let l = array[array.length - 1]
+    if (l % 2 == 0) {
+        return "Первое число с конца чётное"
+    } else {
+        return "Первое число с конца не является чётным"
+    }
+}
+console.log(funcArr([1, 2, 3, 4, 5]))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
