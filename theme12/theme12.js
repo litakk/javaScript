@@ -306,7 +306,7 @@ console.log(DeleteLastElement())
 
 function maxStr() {
  let array = ["Min","Middle","Maximum"]   
-    array.sort((a,b) => b.length - a.length)
+    array.sort((a, b) => b.length - a.length)
 let result = array[0]  
 return result
 }
@@ -318,11 +318,35 @@ console.log(maxStr())
 
 function minStr() {
     let array = ["Min","Middle","Maximum"]   
-       array.sort((a,b) => a.length - b.length)
+       array.sort((a, b) => a.length - b.length)
    let result = array[0]  
    return result
    }
    console.log(minStr())
+   
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 24 - Напишите логику, которая находит самое большое число в массиве чисел
+
+ function maxNum() {
+ let array = [1, 2, 3, 4, 5]   
+ array.sort((a, b) => b - a)
+let result = array[0]  
+return result
+}
+console.log(maxNum())
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 25 - Напишите логику, которая находит самое маленькое число в массиве чисел
+
+function minNum() {
+    let array = [1, 2, 3, 4, 5]   
+    array.sort((a, b) => a - b)
+   let result = array[0]  
+   return result
+   }
+   console.log(minNum())
    
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
