@@ -61,7 +61,7 @@ console.log(funcPadStart("Hello"))
 // 6 - У вас есть полное имя "Vladimir Vladimirovich Putin". Выведите в консоль "Putin V. V"
 // Используя slice() и replace()
 
-let z = "Vladimir Vladimirovich Putin";
+let z = "Vladimir Vladimirovich Putin"
 let first_space = z.indexOf(" ")
 let last_space = z.lastIndexOf(" ")
 
@@ -206,23 +206,23 @@ console.log(Polindrome("madam"))
 
 // function isPrime(num) {
 //     if (num <= 1) {
-//         return false;
+//         return false
 //     }
 //     if (num === 2) {
-//         return true;
+//         return true
 //     }
 //     if (num % 2 === 0) {
-//         return false;
+//         return false
 //     }
 //     if (num === 3 || num === 5 || num === 7 || num === 11 || num === 13 || num === 17 || num === 19) {
-//         return true;
+//         return true
 //     }
-//     return false;
+//     return false
 // }
 
 // // Проверяем числа от 1 до 20
-// for (let i = 1; i <= 20; i++) {
-//     console.log(`${i} - ${isPrime(i) ? "простое число" : "не простое число"}`);
+// for (let i = 1 i <= 20 i++) {
+//     console.log(`${i} - ${isPrime(i) ? "простое число" : "не простое число"}`)
 // }
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -305,10 +305,10 @@ console.log(DeleteLastElement())
 // 22 - Напишите логику, которая находит самую длинную строку в массиве строк
 
 function maxStr() {
- let array = ["Min","Middle","Maximum"]   
+    let array = ["Min", "Middle", "Maximum"]
     array.sort((a, b) => b.length - a.length)
-let result = array[0]  
-return result
+    let result = array[0]
+    return result
 }
 console.log(maxStr())
 
@@ -317,22 +317,22 @@ console.log(maxStr())
 // 23 - Напишите логику, которая находит самую короткую строку в массиве строк
 
 function minStr() {
-    let array = ["Min","Middle","Maximum"]   
-       array.sort((a, b) => a.length - b.length)
-   let result = array[0]  
-   return result
-   }
-   console.log(minStr())
-   
+    let array = ["Min", "Middle", "Maximum"]
+    array.sort((a, b) => a.length - b.length)
+    let result = array[0]
+    return result
+}
+console.log(minStr())
+
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 // 24 - Напишите логику, которая находит самое большое число в массиве чисел
 
- function maxNum() {
- let array = [1, 2, 3, 4, 5]   
- array.sort((a, b) => b - a)
-let result = array[0]  
-return result
+function maxNum() {
+    let array = [1, 2, 3, 4, 5]
+    array.sort((a, b) => b - a)
+    let result = array[0]
+    return result
 }
 console.log(maxNum())
 
@@ -341,12 +341,112 @@ console.log(maxNum())
 // 25 - Напишите логику, которая находит самое маленькое число в массиве чисел
 
 function minNum() {
-    let array = [1, 2, 3, 4, 5]   
+    let array = [1, 2, 3, 4, 5]
     array.sort((a, b) => a - b)
-   let result = array[0]  
-   return result
-   }
-   console.log(minNum())
-   
+    let result = array[0]
+    return result
+}
+console.log(minNum())
+
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
+// 26 - Создайте массив чисел. Найдите максимальное число (например 12345), затем 
+// сложиите каждую цифру в числе (например, 1 + 2 + 3 + 4 + 5 = 15)
+
+function Gg() {
+    let array = [12, 54, 12345, 60]
+    array.sort((a, b) => b - a)
+    let maxNum = array[0]
+    let splNum = String(maxNum).split('')
+    let result = splNum.reduce((acc, next) => acc + parseInt(next), 0)
+    return result
+}
+console.log(Gg())
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// FUNCTIONS
+
+// BEGINNER LEVEL (Newbie) 
+
+// 27 - Напишите функцию, которая принимает целое число минут и преобразует его в секунды
+
+function minutesToSeconds(minutes) {
+    return minutes * 60
+}
+
+console.log(minutesToSeconds(5)) // 5 часов - 300 минут
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 28 - Напишите функцию, которая принимает массив и возвращает тип данных его первого элемента
+
+function Typeof(array) {
+    return typeof (array[0])
+}
+console.log(Typeof([1, 2, 3, 4, 5]))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 29 - Напишите функцию, которая принимает два целых числа и сообщает, какое из них больше
+
+function oneOutOfTwo(number1, number2) {
+    if (number1 > number2) {
+        return `Первый аргумент ${number1} больше чем ${number2}`
+    } else { return `Второй аргумент ${number2} больше чем ${number1}` }
+}
+console.log(oneOutOfTwo(20, 35))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 30 - Напишите функцию, которая принимает строку в качестве аргумента и возвращает ее в обратном порядке. Ex: Hello -> olleH
+
+function reverseText(arg) {
+    return arg.split('').reverse('').join('')
+}
+console.log(reverseText("Hello"))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 31 - Напишите функцию, которая принимает число в качестве аргумента и возвращает его в обратном порядке. Ex: 12345 -> 54321
+
+function reverseNumber(arg) {
+    return String(arg).split('').reverse('').join('')
+}
+console.log(reverseNumber(12345))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 32 - Напишите функцию, которая принимает строку и меняет первую и последнюю позиции букв
+
+function reverseWords(arg) {
+    let firstWord = arg[0]
+    let lastWord = arg[arg.length - 1]
+    let result = lastWord.toUpperCase() + arg.slice(1, -1) + firstWord.toLowerCase()
+    return result
+}
+console.log(reverseWords("Hello"))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 33 - Напишите логику, которая проверит число,
+//      Если оно кратно (если можно делить на 3) 3, то выведите fizz
+//      Если оно кратно (если можно делить на 5) 5, то выведите buzz
+//      В остальных случаях выводите само число
+
+function FizzBuzz(num) {
+    if (num % 3 == 0 && num % 5 == 0) {
+        return "FizzBuzz"
+    } else if (num % 3 == 0) {
+        return "fizz"
+    } else if (num % 5 == 0) {
+        return "buzz"
+    }
+}
+console.log(FizzBuzz(15))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// INTERMEDIATE LEVEL (Junior) 
+
+// 34 - Напишите функцию, которая принимает массив чисел и находит второе наименьшее и второе наибольшее числа 

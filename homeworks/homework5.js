@@ -5,18 +5,16 @@
 //  Если оно кратно (если можно делить на 5) 5, то выведите fizzbuzz.
 // В остальных случаях выводите само число.
 
-// for (let x = 1; x <= 100; x++) {
-//     if (x % 3 === 0 && x % 5 === 0) {
-//         console.log("FizzBuzz");
-//     } else if (x % 3 === 0) {
-//         console.log("Fizz");
-//     } else if (x % 5 === 0) {
-//         console.log("Buzz");
-//     } else {
-//         console.log(z);
-//     }
-// }
-
+function FizzBuzz(num) {
+    if (num % 3 == 0 && num % 5 == 0) {
+        return "FizzBuzz"
+    } else if (num % 3 == 0) {
+        return "fizz"
+    } else if (num % 5 == 0) {
+        return "buzz"
+    }
+}
+console.log(FizzBuzz(15))
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
