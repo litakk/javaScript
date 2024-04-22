@@ -450,3 +450,46 @@ console.log(FizzBuzz(15))
 // INTERMEDIATE LEVEL (Junior) 
 
 // 34 - Напишите функцию, которая принимает массив чисел и находит второе наименьшее и второе наибольшее числа 
+
+function funct() {
+let array = [1, 2, 3, 4, 5]
+let sor = array.sort((a,b) => a - b)
+let m1 = sor[sor.length - 2]
+let m2 = sor[1]
+console.log(`Второе наименьшее число: ${m1}`)
+console.log(`Второе наибольшее число: ${m2}`)
+}
+funct()
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 35 - Напишите функцию, которая принимает строку в качестве параметра и преобразует первую букву каждого слова строки в верхний регистр
+
+function fun(str) {
+    let splText = str.split(" ")
+
+    let Capitalize = splText.map(word => {
+        return word.charAt(0).toUpperCase() + word.slice(1)
+    })
+
+    let result = Capitalize.join(" ")
+
+    return result
+}
+console.log(fun("это пример строки, которую нужно преобразовать"))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 35 - Напишите функцию, которая принимает строку в качестве параметра и находит самое длинное слово в строке
+
+function Param(param) {
+let spl = param.split(" ")
+let sorted = spl.sort((a, b) => b.length - a.length) 
+let result = sorted[0]
+return result
+}
+console.log(Param("Hello universe"))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 36 - 
