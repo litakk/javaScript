@@ -99,10 +99,10 @@
 //  местах кроме первого на любой желаемый знак "$, #, @, *, ..."
 //  -------------
 //  INPUT:
-// let string = "Xusen Xello xXx"
-// let symbol = "$"
-// let firstLetter = string[0]
-//  string = string.toLowerCase().replaceAll(firstLetter.toLowerCase(), symbol)
-// console.log(firstLetter + string.slice(1))
+let string = "This is test text"
+let symbol = "$"
+let firstLetter = string[0]
+ string = string.toLowerCase().replaceAll(firstLetter.toLowerCase(), symbol)
+console.log(firstLetter + string.slice(1))
 //  OUTPUT:  "This is $es$ $ex$"
 //==================================================================================================
