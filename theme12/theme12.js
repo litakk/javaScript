@@ -167,3 +167,26 @@ console.log(startSymbol("$hello", "$"))
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 // INTERMEDIATE LEVEL
+
+// 15 - FizzBuzz 
+
+// Напишите логику, которая проверит число,
+// Если оно кратно (если можно делить на 3) 3, то выведите fizz
+// Если оно кратно (если можно делить на 5) 5, то выведите buzz
+// В остальных случаях выводите само число
+
+function FizzBuzz(num) {
+    if ( num % 3 == 0 && num % 5 == 0 ) {
+        return "FizzBuzz"
+    } else if ( num % 3 == 0 ) {
+        return "fizz"
+    } else if ( num % 5 == 0 ) {
+        return "buzz"
+    }
+} 
+console.log(FizzBuzz(15))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// 15 - POLINDROME
+
