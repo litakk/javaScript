@@ -36,7 +36,7 @@ console.log(person3.address)
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-console.log(!Array.isArray(person3) && typeof(person3))
+console.log(!Array.isArray(person3) && typeof (person3))
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = 
 
@@ -98,16 +98,16 @@ let a = { ...person6, ...person7 } // сливает 6 переменную с �
 // = = = = = = = = = = = = = = = = = = = = = = = = = 
 
 // С ПОМОЩЬЮ PROMPT() ПОЛУЧАЕМ ИМЯ ФАМИЛИЮ 
-let answerName = prompt('Введите Имя')
-let answerSurname = prompt('Введите Фамилию')
-let answerAge = prompt('Введите Возраст')
+// let answerName = prompt('Введите Имя')
+// let answerSurname = prompt('Введите Фамилию')
+// let answerAge = prompt('Введите Возраст')
 
-let result = {
-    name: answerName,
-    surname: answerSurname,
-    age: answerAge
-}
-console.table(result)
+// let result = {
+//     name: answerName,
+//     surname: answerSurname,
+//     age: answerAge
+// }
+// console.table(result)
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = 
 
@@ -116,18 +116,18 @@ console.table(result)
 // intries(...) - ключ и значение
 
 
-let answerName2 = prompt('Введите Имя')
-let answerSurname2 = prompt('Введите Фамилию')
-let answerAge2 = prompt('Введите Возраст')
+// let answerName2 = prompt('Введите Имя')
+// let answerSurname2 = prompt('Введите Фамилию')
+// let answerAge2 = prompt('Введите Возраст')
 
-let result2 = {
-    name: answerName,
-    surname: answerSurname,
-    age: answerAge
-}
-console.log(Object.keys(result2))
-console.log(Object.values(result2))
-console.log(Object.intries(result2))
+// let result2 = {
+//     name: answerName,
+//     surname: answerSurname,
+//     age: answerAge
+// }
+// console.log(Object.keys(result2))
+// console.log(Object.values(result2))
+// console.log(Object.intries(result2))
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = 
 
@@ -142,4 +142,35 @@ console.table(p1)
 console.table(p2)
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+// Создайте функцию, которая принимает объект 
+// в качестве параметра и возвращает сумму всех значений, которые являются числами
+
+
+let obj = {
+    a: 1,
+    b: "2",
+    c: "text",
+    d: 4,
+}
+
+let x = Object.values(obj)
+let re = []
+
+x.forEach(val => {
+    if (typeof (val) == "number" && !isNaN(val)) {
+        re.push(val)
+    }
+})
+
+let r = re.reduce((acc, next) => {
+    return parseInt(acc) + parseInt(next)
+}, 0)
+
+console.log(r)
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+// Создайте функцию, которая принимает объект в качестве параметра и преобразует каждый
+// ключ в обратный регистр (назад-вперёд) и возвращает новый объект
 
