@@ -524,3 +524,5 @@ let text = "Hello world"
 let wordCount = "o"
 console.log("Количество букв '" + wordCount + "' в строке:", funcCount(text, wordCount))
 
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
