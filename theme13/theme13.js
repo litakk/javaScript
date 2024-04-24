@@ -4,7 +4,9 @@
 // index 2   ===  3
 
 // numbers[1]   =>   2
+
 // ========================================================
+
 // let numbers_as_object = {first:11, "second":22, "...":"..." }
 // KEYS ARE ALWAYS STRINGS   =>  КЛЮЧИ ВСЕГДА СТРОКИ
 
@@ -16,6 +18,7 @@
 // numbers_as_object.second      =>  22
 // console.log("numbers_as_object['second']: ", numbers_as_object["second"])
 // console.log("numbers_as_object.second: ", numbers_as_object.second)
+
 // ========================================================
 
 // Objects   =>   {}
@@ -34,8 +37,8 @@
 // console.log(table_arr)
 // console.table(table_obj)
 
-
 // ========================================================
+
 // ----UPDATING--------------------------------------------
 // let table_arr = ['red', 'big', 'for kitchen']
 // let table_obj = {color:"red", size:"big", location:"for kitchen"}
@@ -47,6 +50,8 @@
 // BUT, if not, then it gets created
 // RU: если поле существует, то оно обновляется
 // НО, если нет, то оно создаётся
+
+// ========================================================
 
 // ----DELETION-------------------------------------
 // let table_arr = ['red', 'big', 'for kitchen']
@@ -60,6 +65,7 @@
 // delete table_obj.size
 // console.log("После ",table_obj)
 
+// ========================================================
 
 // ----ADDITION-------------------------------------
 // let table_arr = ['red', 'big', 'for kitchen']
@@ -72,6 +78,8 @@
 // then it gets added as a new field
 // RU: если поле не существует, 
 // то оно добавляется как новое поле
+
+// ========================================================
 
 // ----MERGING-------------------------------------
 // creates a new object from two objects
@@ -90,8 +98,11 @@
 // console.table(a)
 
 // ------------------------------------------------
+
+// ЗАДАНИЯ С УРОКА №13
+
 // ------------------------------------------------
-// ------------------------------------------------
+
 //* TASK TO GET INFO FROM CLIENT AND CREATE A TABLE
 // RU: ЗАДАЧА ПОЛУЧИТЬ ИНФОРМАЦИЮ ОТ КЛИЕНТА И СОЗДАТЬ ТАБЛИЦУ
 
