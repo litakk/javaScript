@@ -126,3 +126,69 @@
 //              берёт каждый заход от обекта и создаёт 
 //              маленькие листы от них
 
+
+
+// Object.keys(...)    => gets every key from object
+//                     получает каждый ключ от обекта
+
+// Object.values(...)  => gets every value from object
+//                     получает каждый значение от обекта
+
+let person = {
+    name: "name 1",
+    surname: "surname 1",
+    age: 20,
+    address: "address 1"
+}
+
+// let x = Object.keys(person) // => ["name", "surname", "age", "address"]
+// let v = Object.values(person) // => ["name 1", "surname 1", 20, "address 1"]
+// let e = Object.entries(person) // => [["name", "name 1"], ["surname", "surname 1"], ["age", 20], ["address", "address 1"]]
+
+// --------------------------------------------------------
+// --FUNCTIONs inside Objcets------------------------------
+// --------------------------------------------------------
+
+// function fn_name(parameter) {
+//    block of code
+// }
+
+// DRY  =>  Don't Repeat Yourself 
+
+// let person = {
+//     name: "Warren",
+//     surname: "Buffet",
+//     age: 80,
+//     fullname: function() {
+//         return this.name + " " + this.surname + ". And his age is " + this.age
+//     }
+// }
+// console.log(person.fullname())
+
+// -------------------------------------------------------------------
+// ------CREATING OBJECTS---------------------------------------------
+// -------------------------------------------------------------------
+
+function Person(cName, surname, age) {
+    this.name = cName
+    this.surname = surname
+    this.age = age
+}
+let p1 = new Person("name 1", "surname 1", 20)
+let p2 = new Person("name 2", "surname 2", 30)
+console.table(p1)
+console.table(p2)
+
+// ========================================================
+// TASKS
+let x = {'a': 1, 'b': "2", 'c': "3", 'd': 4, "e": 'wqwe' }
+let z = Object.keys(x).length
+console.log(z)
+
+function del_key(object, key) {
+    let obj_copy = {...object}
+    delete obj_copy[key]
+    return obj_copy
+}
+
+console.log(del_key(x, 'a'))
