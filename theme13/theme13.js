@@ -1,176 +1,128 @@
-// любой объект имеет своё качество - качество это то как он представляе его (ex: описывает человека)
+// let numbers = [1, 2, 3]
+// index 0   ===  1
+// index 1   ===  2
+// index 2   ===  3
 
-// объект создаётся в фигурной скобке {}
-// ex: 
+// numbers[1]   =>   2
+// ========================================================
+// let numbers_as_object = {first:11, "second":22, "...":"..." }
+// KEYS ARE ALWAYS STRINGS   =>  КЛЮЧИ ВСЕГДА СТРОКИ
 
-const person1 = {
-    "name": "Bob",
-    "age": 30,
-    "city": "New York",
-}
+// key  first  = 1
+// key  second = 2
+// key  ...    = ...
 
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
+// numbers_as_object["second"]   =>  22
+// numbers_as_object.second      =>  22
+// console.log("numbers_as_object['second']: ", numbers_as_object["second"])
+// console.log("numbers_as_object.second: ", numbers_as_object.second)
+// ========================================================
 
-const person2 = {
-    "name": "Bob",
-    "age": 30,
-    "city": "New York",
-    address: {
-        city: "New York",
-        street: "Broadway",
-        number: 12
-    }
-}
+// Objects   =>   {}
+// Arrays    =>   []
 
-// могут иметь ключ без ковычек EX: { city: "New York" }
+// OBJECT SYNTAX    =>   СИНТАКСИС ОБЕКТОВ
+// {key: 'value'}   =>   {ключ: "значние"}
 
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
+// Создаём обект "стол" в двух вариантах
+// let table_arr = ['red', 'big', 'for kitchen']
+// let table_obj = {color:"red", size:"big", location:"for kitchen"}
 
-const person3 = {
-    "name": "Bob",
-    "age": 30,
-    address: "New York"
-}
-console.log(person3["address"]) // output: New York
-console.log(person3.address)
+// console.log(table_arr[0])
+// console.log(table_obj.color)
 
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
+// console.log(table_arr)
+// console.table(table_obj)
 
-console.log(!Array.isArray(person3) && typeof (person3))
 
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
+// ========================================================
+// ----UPDATING--------------------------------------------
+// let table_arr = ['red', 'big', 'for kitchen']
+// let table_obj = {color:"red", size:"big", location:"for kitchen"}
 
-// ОТ ОБЪЕКТА С ПОМОЩЬЮ КЛЮЧА БЕРЁМ
-// ОТ МАССИВА С ПОМОЩЬЮ INDEX
+// table_arr[0] = "blue"
+// table_obj.color = "blue"   //  === table_obj["color"]
 
-// SYNTAX:
-// есть ключ существует он его обновляет на другое значение
-// если ключ не существует он его создаёт
+// if referring field exists then it gets updated
+// BUT, if not, then it gets created
+// RU: если поле существует, то оно обновляется
+// НО, если нет, то оно создаётся
 
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
+// ----DELETION-------------------------------------
+// let table_arr = ['red', 'big', 'for kitchen']
+// let table_obj = {color:"red", size:"big", location:"for kitchen"}
 
-// UPDATE
+// console.log("До ",table_arr)
+// delete table_arr[1]
+// console.log("После ",table_arr)
 
-const person4 = {
-    "name": "Bob",
-    "age": 30,
-    address: "New York"
-}
-person4.age = 15
+// console.log("До ",table_obj)
+// delete table_obj.size
+// console.log("После ",table_obj)
 
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-// DELETE
+// ----ADDITION-------------------------------------
+// let table_arr = ['red', 'big', 'for kitchen']
+// let table_obj = {color:"red", size:"big", location:"for kitchen"}
 
-const person5 = {
-    "name": "Bob",
-    "age": 30,
-    address: "New York"
-}
-person5.age = 15
-delete person5 // нужно указать ключ или index для Array
+// table_arr[3] = "new field"
+// table_obj.new_field = "new field"   //  === table_obj["new_field"]
 
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
+// if referring field does NOT exist
+// then it gets added as a new field
+// RU: если поле не существует, 
+// то оно добавляется как новое поле
 
-// ADD
-
-const person6 = {
-    "name": "Bob",
-    "age": 30,
-    address: "New York"
-}
-// что бы обновить массив table[3] = "text"
-// что бы обновить в объектах: 
-// table.newfield = "new field"
-
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
-
-// СЛИВАНИЕ 2 ОБЪЕКТОВ ИЛИ МАССИВОВ
-
-// слить ключи:
-const person7 = {
-    "name": "Bob",
-    "age": 30,
-    address: "New York"
-}
-let a = { ...person6, ...person7 } // сливает 6 переменную с объектами с 7 переменной
-
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
-
-// С ПОМОЩЬЮ PROMPT() ПОЛУЧАЕМ ИМЯ ФАМИЛИЮ 
-// let answerName = prompt('Введите Имя')
-// let answerSurname = prompt('Введите Фамилию')
-// let answerAge = prompt('Введите Возраст')
-
-// let result = {
-//     name: answerName,
-//     surname: answerSurname,
-//     age: answerAge
+// ----MERGING-------------------------------------
+// creates a new object from two objects
+// создаёт новый обект из двух обектов
+// let client = {
+//     name: "name 1",
+//     surname: "surname 1",
+//     age: 20,
 // }
-// console.table(result)
-
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
-
-// keys(...) - только ключи
-// values(...) - только значения
-// intries(...) - ключ и значение
-
-
-// let answerName2 = prompt('Введите Имя')
-// let answerSurname2 = prompt('Введите Фамилию')
-// let answerAge2 = prompt('Введите Возраст')
-
-// let result2 = {
-//     name: answerName,
-//     surname: answerSurname,
-//     age: answerAge
+// let client_address = {
+//     city: "city 1",
+//     street: "street 1",
+//     house: 1,
 // }
-// console.log(Object.keys(result2))
-// console.log(Object.values(result2))
-// console.log(Object.intries(result2))
+// let a = {...client, ...client_address}
+// console.table(a)
 
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
+// ------------------------------------------------
+// ------------------------------------------------
+// ------------------------------------------------
+//* TASK TO GET INFO FROM CLIENT AND CREATE A TABLE
+// RU: ЗАДАЧА ПОЛУЧИТЬ ИНФОРМАЦИЮ ОТ КЛИЕНТА И СОЗДАТЬ ТАБЛИЦУ
 
-function Person(cName, surname, age) {
-    this.name = cName
-    this.surname = surname
-    this.age = age
-}
-let p1 = new Person("name1", "surname 1", 20)
-let p2 = new Person("name2", "surname 2", 30)
-console.table(p1)
-console.table(p2)
+// let client_name = prompt("Enter your name: ")
+// let client_surname = prompt("Enter your surname: ")
+// let client_age = prompt("Enter your age: ")
 
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
+// let client = {
+//     name: client_name,
+//     "surname": client_surname,
+//     "age": client_age
+// }
+// console.table(client)
+// ------------------------------------------------
+// ------------------------------------------------
+// ------------------------------------------------
+// let client = {
+//     name: "Name 1",
+//     surname: "Surname 1",
+//     age: 20
+// }
+// let x = ["a", "b", "c"]
+// x.length - 1
+// Array.isArray([])  => bool
 
-// Создайте функцию, которая принимает объект 
-// в качестве параметра и возвращает сумму всех значений, которые являются числами
+// Object.keys(client)   // => ["name", "surname", "age"]  
+// Object.values(client)  // => ["Name 1", "Surname 1", 20]
+// Object.entries(client)  // => [["name", "Name 1"], ["surname", "Surname 1"], ["age", 20]]
 
-
-let obj = {
-    a: 1,
-    b: "2",
-    c: "text",
-    d: 4,
-}
-
-let x = Object.values(obj)
-let re = []
-
-x.forEach(val => {
-    if (typeof (val) == "number" && !isNaN(val)) {
-        re.push(val)
-    }
-})
-
-let r = re.reduce((acc, next) => {
-    return parseInt(acc) + parseInt(next)
-}, 0)
-
-console.log(r)
-
-// = = = = = = = = = = = = = = = = = = = = = = = = = 
-
-// Создайте функцию, которая принимает объект в качестве параметра и преобразует каждый
-// ключ в обратный регистр (назад-вперёд) и возвращает новый объект
+// Object.entries(...)  => gets every entry from 
+//                         an object and makes a new Array
+//              берёт каждый заход от обекта и создаёт 
+//              маленькие листы от них
 
