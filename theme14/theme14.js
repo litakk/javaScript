@@ -67,20 +67,38 @@ console.log(`Чётные ${evens} \n Нечетные ${odds}`)
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-function largStr(text) {
-    let spl = text.split(' ')
+// function largStr(text) {
+//     let spl = text.split(' ')
 
-    return spl.reduce((acc, next) => {
-        if (next.length > acc.length) {
-            return next
-        } else {
-            return acc
+//     return spl.reduce((acc, next) => {
+//         if (next.length > acc.length) {
+//             return next
+//         } else {
+//             return acc
+//         }
+//     })
+// }
+
+// console.log(largStr("This is 2024-year and 4th month and 25th day"))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// evens and odds with reduce (acc, next) 
+
+function lastFunc(text) {
+    let { evens, odds } = text.split("").reduce((acc, next) => {
+        if (!isNaN(next) && next !== " ") {
+            if (parseInt(next) % 2 === 0) {
+                acc.evens.push(parseInt(next))
+            } else {
+                acc.odds.push(parseInt(next))
+            }
         }
-    })
+        return acc
+    }, { evens: [], odds: [] })
+
+    console.log(`Чётные в reduce - ${evens}\nНечетные в reduce - ${odds}`)
+    return []
 }
 
-console.log(largStr("This is 2024-year and 4th month and 25th day"))
-
-
-
-
+lastFunc("This is 2024-year and 4th month and 25th day")
