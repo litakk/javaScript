@@ -307,20 +307,20 @@
 
 // function findLargestNumber(a, b, c) {
 //     if (a >= b && a >= c) {
-//       return a;
+//       return a
 //     } else if (b >= a && b >= c) {
-//       return b;
+//       return b
 //     } else {
-//       return c;
+//       return c
 //     }
 //   }
 
-//   let number1 = 10;
-//   let number2 = 20;
-//   let number3 = 15;
+//   let number1 = 10
+//   let number2 = 20
+//   let number3 = 15
   
-//   let largestNumber = findLargestNumber(number1, number2, number3);
-//   console.log("Самое большое число: " + largestNumber);
+//   let largestNumber = findLargestNumber(number1, number2, number3)
+//   console.log("Самое большое число: " + largestNumber)
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
