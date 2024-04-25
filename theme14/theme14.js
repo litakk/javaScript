@@ -43,7 +43,31 @@ console.log("Result: ", r)
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
+// Create a function that takes a text and finds all numbers inside 
+// it and devides them into evens and odds
 
+// RU: Создайте функцию, которая принимает текст и находит все числа внутри него и 
+// делит их на четные и нечетные
+
+// EX:
+let text = "This is 2024-year and 4th month and 25th day"
+function get_numbers(text) {
+    let odds = []
+    let evens = []
+    text.split("").forEach(item => {
+        if (!isNaN(item) && item != " ") {
+            let num = parseInt(item)
+            if (num%2 == 0) {
+                evens.push(num)
+            } else {
+                odds.push(num)
+            }
+        }
+    })
+    return "evens: " + evens + " odds: " + odds
+}
+let r = get_numbers(text) // { evens: [2, 0, 2, 4, 4, 2],  odds: [5] }
+console.log("Result: ", r)
 
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
