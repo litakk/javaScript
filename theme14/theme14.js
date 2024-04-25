@@ -67,8 +67,19 @@ console.log(`Чётные ${evens} \n Нечетные ${odds}`)
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
+function largStr(text) {
+    let spl = text.split(' ')
 
+    return spl.reduce((acc, next) => {
+        if (next.length > acc.length) {
+            return next
+        } else {
+            return acc
+        }
+    })
+}
 
+console.log(largStr("This is 2024-year and 4th month and 25th day"))
 
 
 
