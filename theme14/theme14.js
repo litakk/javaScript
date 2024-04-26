@@ -66,6 +66,7 @@ function get_numbers(text) {
     })
     return "evens: " + evens + " odds: " + odds
 }
+
 let r2 = get_numbers(text) // { evens: [2, 0, 2, 4, 4, 2],  odds: [5] }
 console.log("Result: ", r2)
 
