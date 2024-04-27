@@ -84,7 +84,7 @@ function func(str, num) {
     // = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     
     // evens and odds with reduce (acc, next) 
-    
+
     function lastFunc(text) {
         let { evens, odds } = text.split("").reduce((acc, next) => {
             if (!isNaN(next) && next !== " ") {
