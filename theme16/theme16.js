@@ -56,30 +56,6 @@ for (let index=0; index<10; index++) {
 // - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let person = {
-//     name: "Ali",
-//     surname: "Veli",
-//     age: 25
-// }
-
-
-
-
 // ЗАДАНИЕ - 1
 
 // let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
