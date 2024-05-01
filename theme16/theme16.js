@@ -1,8 +1,60 @@
-let person = {
-    name: "Ali",
-    surname: "Veli",
-    age: 25
-}
+// ЦИКЛ - повторение какого то случая
+
+// show_message() - я должен 10 раз запустить его что бы показать какое то сообщние
+// example -
+show_message()
+show_message()
+show_message()
+show_message()
+show_message()
+show_message()
+show_message()
+show_message()
+show_message()
+show_message()
+// А скажем циклу запустить его 10 раз
+
+// Есть 3 вида цикла - 
+// Standart - когда создаёт свою переменную
+// for ... in ...   => objects - объект {}
+// for ... of ...   => arrays - лист []
+
+// SYNTAX:
+// цикл работает так: { ... } - прочитается если expression-2; выдаст true.
+// 2 выражение это condition - условие.
+// если выполняется условие (condition) - дайт нам true то прочитается { ... }
+
+// 1 цикл:
+// for (expression-1; expression-2; expression-3) { ... }
+
+// 2 цикл:
+// for (create-a-var; condition; var-manipulation) { ... }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let person = {
+//     name: "Ali",
+//     surname: "Veli",
+//     age: 25
+// }
 
 
 // что такое цикл? - цикл это то что происходит повторно.
@@ -85,11 +137,11 @@ let person = {
 // ---------------------
 
 // 2. Создайте функцию, которая принимает список целых чисел и находит самое маленькое число
-function max_min(nums) {
-    let max = 0
-    let min = num[0]
-    for ()
-}
+// function max_min(nums) {
+//     let max = 0
+//     let min = num[0]
+//     for ()
+// }
 // ---------------------
 // 3. Создайте функцию, которая принимает список целых чисел и находит самое большое число
 // ---------------------
