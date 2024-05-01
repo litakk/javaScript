@@ -57,6 +57,8 @@ for (let index=0; index<10; index++) {
 
 // ЗАДАНИЯ В КОНЦЕ УРОКА:
 
+// BEGINNER LEVEL
+
 // ЗАДАНИЕ - 1
 
 // let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -70,12 +72,16 @@ for (let index=0; index<10; index++) {
 // }
 // console.log("evens: ", even)
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // ЗАДАНИЕ - 2
 
 // let result = ''
 // for (let i= 0; )
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// INTERMEDIATE LEVEL:
 
 // ЗАДАНИЕ - 3
 
