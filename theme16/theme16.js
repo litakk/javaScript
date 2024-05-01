@@ -2,20 +2,20 @@
 
 // show_message() - я должен 10 раз запустить его что бы показать какое то сообщние
 // example -
-show_message()
-show_message()
-show_message()
-show_message()
-show_message()
-show_message()
-show_message()
-show_message()
-show_message()
-show_message()
+// show_message()
+// show_message()
+// show_message()
+// show_message()
+// show_message()
+// show_message()
+// show_message()
+// show_message()
+// show_message()
+// show_message()
 // А скажем циклу запустить его 10 раз
 
 // Есть 3 вида цикла - 
-// Standart - когда создаёт свою переменную
+// Standart - нужен когда надо повторить функцию много раз - создаёт свою переменную
 // for ... in ...   => objects - объект {}
 // for ... of ...   => arrays - лист []
 
@@ -31,8 +31,21 @@ show_message()
 // for (create-a-var; condition; var-manipulation) { ... }
 
 
-
-
+// в первую очередь JS читает for и понимает что это цикл, standart(3 выражения)  
+for (let index=0; index<10; index++) {
+    console.log('index: ', index)
+}
+// result:
+// index:  0
+// index:  1
+// index:  2
+// index:  3
+// index:  4
+// index:  5
+// index:  6
+// index:  7
+// index:  8
+// index:  9
 
 
 
