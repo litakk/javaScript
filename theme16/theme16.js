@@ -18,8 +18,6 @@
 
 // Есть 3 вида цикла - 
 // Standart - нужен когда надо повторить функцию много раз - создаёт свою переменную
-// for ... in ...   => objects - объект {}
-// for ... of ...   => arrays - лист []
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -27,20 +25,21 @@
 // цикл работает так: { ... } - прочитается если expression-2; выдаст true.
 // 2 выражение это condition - условие.
 // если выполняется условие (condition) - дайт нам true то прочитается { ... }
+// 3 выражение управляет 1.
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// 1 цикл:
+// 1 пример:
 // for (expression-1; expression-2; expression-3) { ... }
 
-// 2 цикл:
+// 2 пример:
 // for (create-a-var; condition; var-manipulation) { ... }
 
 
 // в первую очередь JS читает for и понимает что это цикл, standart(3 выражения)  
-for (let index=0; index<10; index++) {
-    console.log('index: ', index)
-}
+// for (let index=0; index<10; index++) {
+//     console.log('index: ', index)
+// }
 // result:
 // index:  0
 // index:  1
@@ -55,22 +54,78 @@ for (let index=0; index<10; index++) {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+// for ... in ...   => objects - объект {}
+// for ... of ...   => arrays - лист []
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+for (let value=0; value<letters.length; value++) {
+    console.log('index: ', value)
+    console.log('value: ', letters[value])
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// 2 вид цикла который больше предназначен для массивов:
+
+// of for array - массив.
+// for (let element of letters) {
+//     console.log(element)
+// }
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - -
+// in - универсальный но больше предназначен больше для обхектов - приинмает ключи.
+// in for object - объекты. {key: value}
+// для каждого ключа из этого объекта.
+
+let person = {
+    name:  "Ali",
+    surname: "Veli",
+    age: 25
+}
+
+
+for (let key in person) { // примет каждый ключ
+console.log("Key: ", key)
+console.log("Value: ", person[key])
+}
+
+
+
+
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 // ЗАДАНИЯ В КОНЦЕ УРОКА:
 
 // BEGINNER LEVEL
 
 // ЗАДАНИЕ - 1
 
-// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// let even = []
-
+let even = []
+let odd = []
 // for (let i = 0; i < numbers.length; i++) {
 //     if (numbers[i] % 2 == 0) {
 //         even.push(numbers[i])
 //     }
 // }
 // console.log("evens: ", even)
+
+
+for (let value in numbers) {
+    if (numbers[value] % 2 == 0) {
+        even.push(numbers[value])
+    } else {
+        odd.push(numbers[value])
+    }
+} 
+console.log(`четные ${even} и нечётные ${odd}`)
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -96,10 +151,10 @@ for (let index=0; index<10; index++) {
 // * * * *
 // * * * * *
 // * * * * * *
-// * * * * * * * 
+// * * * * * * *
 // * * * * * * * *
-// * * * * * * * * * 
-// * * * * * * * * * * 
+// * * * * * * * * *
+// * * * * * * * * * *
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -140,7 +195,7 @@ for (let index=0; index<10; index++) {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// 4. Создайте функцию, которая 
+// 4. Создайте функцию, которая
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - -
 
