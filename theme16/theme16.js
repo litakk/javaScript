@@ -55,7 +55,7 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // for ... in ...   => objects - объект {}
-// for ... of ...   => arrays - лист []
+// for ... of ...   => arrays - массив []
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -131,9 +131,18 @@ console.log(`четные ${even} и нечётные ${odd}`)
 
 // ЗАДАНИЕ - 2
 
-// let result = ''
-// for (let i= 0; )
+// Найди самое большое целое число.
 
+let numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+let max = numbers1[0]
+
+for (let i in numbers1) {
+    if(numbers1[i] > max) {
+        max = numbers1[i]
+    }
+}
+console.log(`самое большое целое число: ${max}`)
 // - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // INTERMEDIATE LEVEL:
