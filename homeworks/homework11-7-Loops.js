@@ -37,3 +37,6 @@ function maxNum(array) {
 }
 let array = [12, 13, 14, 15]
 console.log(maxNum(array))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
