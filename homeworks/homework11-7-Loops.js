@@ -55,3 +55,6 @@ function minNum(array) {
     return max
 }
 console.log(minNum([12, 13, 14, 15]))
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
