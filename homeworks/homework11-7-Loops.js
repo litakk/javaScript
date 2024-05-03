@@ -40,3 +40,18 @@ console.log(maxNum(array))
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
+// 2. Создайте функцию, которая принимает список
+//    целых чисел и находит самое маленькое число
+
+function minNum(array) {
+
+    let max = array[0]
+
+    for (let num = 1; num > array.length; num++) {
+        if (array[num] > max) {
+            max = array[num]
+        }
+    }
+    return max
+}
+console.log(minNum([12, 13, 14, 15]))
