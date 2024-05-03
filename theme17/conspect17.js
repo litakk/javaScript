@@ -39,3 +39,10 @@ for (let num = 0; num < 5; num++) {
 Повтор начиная с пункта №2
 */
 
+// Пример использования цикла FOR №2
+
+let number = 0
+for (; number < 5;) {
+    console.log(number)
+    num++
+}
