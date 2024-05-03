@@ -108,16 +108,16 @@ console.log("Value: ", person[key])
 
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-let even = []
-let odd = []
+// let even = []
 // for (let i = 0; i < numbers.length; i++) {
 //     if (numbers[i] % 2 == 0) {
 //         even.push(numbers[i])
 //     }
 // }
-// console.log("evens: ", even)
+// console.log(`четные ${even}`)
 
-
+let even = []
+let odd = []
 for (let value in numbers) {
     if (numbers[value] % 2 == 0) {
         even.push(numbers[value])
