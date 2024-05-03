@@ -46,3 +46,6 @@ for (; number <= 5;) {
     console.log(number)
     number++
 }
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
