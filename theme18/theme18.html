@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="top">
+        <h1>🔥 Theme switcher</h1>
+        <button class="btn light"></button>
+        <button class="btn violet"></button>
+        <button class="btn indigo"></button>
+        <button class="btn gray"></button>
+    </div>
+
+    <main>
+        <img src="коровка.jpg" width="150" height="150">
+        <div class="text">
+            <h2>A Sweet Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum doloribus minima, fuga pariatur temporibus perspiciatis est magni odit ducimus in blanditiis deserunt quidem commodi ab dolorem, autem similique quas tenetur?</p>
+        </div>
+    </main>
+
+
+    <script>
+        // 1. Search and find needed TAGs
+        // RU: Ищем и находим нужные теги 
+        // -------------------------------
+        // 2. Connect events to found TAGs
+        // RU: Подключаем к найденным тегам события
+        // -------------------------------
+        // 3. Create functions for answering to these events
+        // RU: Создаем функции для реагирования на эти события
+
+        // ----------------------------------------------
+        // STEP 1
+        const topDiv = document.querySelector('.top')
+        const main = document.querySelector('main')
+        const light = document.querySelector('.light')
+        const violet = document.querySelector('.violet')
+        const indigo = document.querySelector('.indigo')
+        const gray = document.querySelector('.gray')
+        // ----------------------------------------------
+        // STEP 2
+        light.onclick = lightTheme
+        violet.onclick = violetTheme
+        indigo.onclick = indigoTheme
+        gray.onclick = grayTheme
+        // ----------------------------------------------
+        // STEP 3
+        function changeColors(c1, c2, c3, c4) {
+            topDiv.style.backgroundColor = c1
+            topDiv.style.color = c2
+            main.style.backgroundColor = c3
+            main.style.color = c4
+        }
+        function lightTheme(e) {
+            changeColors('white', 'black', '#eee', 'black')
+        }
+        function violetTheme(e) {
+            changeColors('darkcyan', 'snow', 'lightcyan', 'black')
+        }
+        function indigoTheme(e) {
+            changeColors('indigo', 'snow', 'lightsteelblue', 'black')
+        }
+        function grayTheme(e) {
+            changeColors('gray', 'snow', 'lightgray', 'black')
+        }
+    </script>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        transition: 0.3s;
+    }
+    .top {
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid indigo;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    .light { background-color: white; }
+    .violet { background-color: darkcyan; }
+    .indigo { background-color: indigo; }
+    .gray { background-color: gray; }
+
+    img {
+        border-radius: 20px;
+        display: block;
+        margin: 0 auto;
+    }
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee;
+        padding: 50px 0;
+    }
+
+</style>
+</html>
