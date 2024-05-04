@@ -25,14 +25,41 @@
 
 // хотим взять все BUTTON - в качестве массива - лист - ARRAY
 
-const button = document.querySelectorAll('button')
+// const button = document.querySelectorAll('button')
 
-function handleClick(event) {
-    console.log('Button clicked')
-    event.target.style.backgroundColor = 'black' 
-    event.target.style.color = 'red'
-}
-button.forEach(() => {
+// function handleClick(event) {
+//     console.log('Button clicked')
+//     event.target.style.backgroundColor = 'black' 
+//     event.target.style.color = 'red'
+// }
+// button.forEach((button) => {
+//     button.onClick = handleClick
+// })
 
-})
-button.onClick = handleClick
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+//  THEME SWITCHER
+
+// ШАГ 1: НАХОЖДЕНИЕ ЭЛЕМЕНТОВ
+// ШАГ 2: ПОДКЛЮЧАЕМ ЭЛЕМЕНТЫ К ONCLICK ( СОБЫТИЯ )
+// ШАГ 3: ПОДКЛЮЧАЕМ ФУНКЦИОНАЛЬНОСТЬ К ЭТИМ СОБЫТИЯМ.
+
+// ШАГ 1:
+const top = document.querySelector('.top')
+const main = document.querySelector('main')
+const light = document.querySelector('.light')
+const violet = document.querySelector('.violet')
+const indigo = document.querySelector('.indigo')
+const gray = document.querySelector('.gray')
+
+// ШАГ 2:
+light.onclick = lightTheme
+violet.onclick = violetTheme
+indigo.onclick = indigoTheme
+gray.onclick = grayTheme
+
+// ШАГ 3:
+function lightTheme(e) {}
+function violetTheme(e) {}
+function indigoTheme(e) {}
+function grayTheme(e) {}

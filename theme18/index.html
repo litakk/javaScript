@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Document Object Model - В виде документы заходит на JS</h1>
+    <!-- <h1>Document Object Model - В виде документы заходит на JS</h1>
     <h2>Когда наш html файл заходит на JS он становиться object => { ... }</h2>
     <h3>JS может контролировать HTML файл</h3>
     <button>Click me</button>
@@ -16,8 +16,69 @@
     <button>Click me</button>
     <button>Click me</button>
     <button>Click me</button>
-    <button>Click me</button>
+    <button>Click me</button> -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <div class="top">
+        <h1>Theme switcher</h1>
+        <button class="btn light"></button>
+        <button class="btn violet"></button>
+        <button class="btn indigo"></button>
+        <button class="btn gray"></button>
+
+    </div>
+
+    <main>
+        <img src="коровка.jpg" width="150" height="150">
+        <div class="text">
+            <h2>A Sweet Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </main>
+
+
     <script src="theme18.js"></script>
 </body>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+.top {
+    text-align: center;
+    padding: 50px 0;
+}
+button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.light { background-color: white; }
+.violet { background-color: darkcyan; }
+.indigo { background-color: indigo; }
+.gray { background-color: gray; }
+
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    padding: 50px 0;
+}
+
+</style>
 
 </html>
