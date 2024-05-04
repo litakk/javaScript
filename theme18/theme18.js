@@ -45,13 +45,15 @@
 // ШАГ 3: ПОДКЛЮЧАЕМ ФУНКЦИОНАЛЬНОСТЬ К ЭТИМ СОБЫТИЯМ.
 
 // ШАГ 1:
-const top = document.querySelector('.top')
+const topDiv = document.querySelector('.topDiv')
 const main = document.querySelector('main')
 const light = document.querySelector('.light')
 const violet = document.querySelector('.violet')
 const indigo = document.querySelector('.indigo')
 const gray = document.querySelector('.gray')
 
+const left = document.querySelector('left')
+const right = document.querySelector('right')
 // ШАГ 2:
 light.onclick = lightTheme
 violet.onclick = violetTheme
@@ -59,7 +61,14 @@ indigo.onclick = indigoTheme
 gray.onclick = grayTheme
 
 // ШАГ 3:
-function lightTheme(e) {}
-function violetTheme(e) {}
-function indigoTheme(e) {}
-function grayTheme(e) {}
+function changeColors(c1, c2, c3, c4) {
+    topDiv.style.backgroundColor = c1
+    topDiv.style.color = c2
+    main.style.backgroundColor = c3
+    main.style.color = c4
+}
+
+function lightTheme(e) { changeColors('white', 'black', '#eee', 'black') }
+function violetTheme(e) { changeColors('darkcyan', 'snow', 'lightcyan', 'black') }
+function indigoTheme(e) { changeColors('indigo', 'snow', 'lightsteelblue', 'black') }
+function grayTheme(e) { changeColors('gray', 'snow', 'lightgray', 'black') }
