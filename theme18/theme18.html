@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div class="top">
         <h1>🔥 Theme switcher</h1>
@@ -18,35 +20,37 @@
         <img src="коровка.jpg" width="150" height="150">
         <div class="text">
             <h2>A Sweet Heading</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum doloribus minima, fuga pariatur temporibus perspiciatis est magni odit ducimus in blanditiis deserunt quidem commodi ab dolorem, autem similique quas tenetur?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum doloribus minima, fuga pariatur
+                temporibus perspiciatis est magni odit ducimus in blanditiis deserunt quidem commodi ab dolorem, autem
+                similique quas tenetur?</p>
         </div>
 
-<table style="border-color: gray;">
-<tr>
-    <td class="td1"></td>
-    <td class="td2"></td>
-    <td class="td3"></td>
-    <td class="td4"></td>
-</tr>
-<tr>
-    <td class="td1"></td>
-    <td class="td2"></td>
-    <td class="td3"></td>
-    <td class="td4"></td>
-</tr>
-<tr>
-    <td class="td1"></td>
-    <td class="td2"></td>
-    <td class="td3"></td>
-    <td class="td4"></td>
-</tr>
-<tr>
-    <td class="td1"></td>
-    <td class="td2"></td>
-    <td class="td3"></td>
-    <td class="td4"></td>
-</tr>
-</table>
+        <table style="border-color: gray;">
+            <tr>
+                <td class="tdColor1"></td>
+                <td class="tdColor2"></td>
+                <td class="tdColor3"></td>
+                <td class="tdColor4"></td>
+            </tr>
+            <tr>
+                <td class="tdColor5"></td>
+                <td class="tdColor6"></td>
+                <td class="tdColor7"></td>
+                <td class="tdColor8"></td>
+            </tr>
+            <tr>
+                <td class="tdColor9"></td>
+                <td class="tdColor10"></td>
+                <td class="tdColor11"></td>
+                <td class="tdColor12"></td>
+            </tr>
+            <tr>
+                <td class="tdColor13"></td>
+                <td class="tdColor14"></td>
+                <td class="tdColor15"></td>
+                <td class="tdColor16"></td>
+            </tr>
+        </table>
 
     </main>
 
@@ -70,10 +74,22 @@
         const indigo = document.querySelector('.indigo')
         const gray = document.querySelector('.gray')
 
-        const td1 = document.querySelector('.td1')
-        const td2 = document.querySelector('.td2')
-        const td3 = document.querySelector('.td3')
-        const td4 = document.querySelector('.td4')
+        const tdColor1 = document.querySelector('.tdColor1')
+        const tdColor2 = document.querySelector('.tdColor2')
+        const tdColor3 = document.querySelector('.tdColor3')
+        const tdColor4 = document.querySelector('.tdColor4')
+        const tdColor5 = document.querySelector('.tdColor5')
+        const tdColor6 = document.querySelector('.tdColor6')
+        const tdColor7 = document.querySelector('.tdColor7')
+        const tdColor8 = document.querySelector('.tdColor8')
+        const tdColor9 = document.querySelector('.tdColor9')
+        const tdColor10 = document.querySelector('.tdColor10')
+        const tdColor11 = document.querySelector('.tdColor11')
+        const tdColor12 = document.querySelector('.tdColor12')
+        const tdColor13 = document.querySelector('.tdColor13')
+        const tdColor14 = document.querySelector('.tdColor14')
+        const tdColor15 = document.querySelector('.tdColor15')
+        const tdColor16 = document.querySelector('.tdColor16')
 
         // ----------------------------------------------
         // STEP 2
@@ -82,10 +98,22 @@
         indigo.onclick = indigoTheme
         gray.onclick = grayTheme
 
-        td1.onclick = td1
-        td2.onclick = td2
-        td3.onclick = td3
-        td4.onclick = td4
+        tdColor1.onclick = tdCol1
+        tdColor2.onclick = tdCol2
+        tdColor3.onclick = tdCol3
+        tdColor4.onclick = tdCol4
+        tdColor5.onclick = tdCol5
+        tdColor6.onclick = tdCol6
+        tdColor7.onclick = tdCol7
+        tdColor8.onclick = tdCol8
+        tdColor9.onclick = tdCol9
+        tdColor10.onclick = tdCol10
+        tdColor11.onclick = tdCol11
+        tdColor12.onclick = tdCol12
+        tdColor13.onclick = tdCol13
+        tdColor14.onclick = tdCol14
+        tdColor15.onclick = tdCol15
+        tdColor16.onclick = tdCol16
 
         // ----------------------------------------------
         // STEP 3
@@ -110,10 +138,23 @@
 
 
 
-        function td1(e) {  }
-        function td2(e) {}
-        function td3(e) {}
-        function td4(e) {}
+        function tdCol1(e) { tdColor1.style.backgroundColor = 'cyan' }
+        function tdCol2(e) { tdColor2.style.backgroundColor = 'black' }
+        function tdCol3(e) { tdColor3.style.backgroundColor = 'blue' }
+        function tdCol4(e) { tdColor4.style.backgroundColor = 'yellow' }
+        function tdCol5(e) { tdColor5.style.backgroundColor = 'gray' }
+        function tdCol6(e) { tdColor6.style.backgroundColor = 'purple' }
+        function tdCol7(e) { tdColor7.style.backgroundColor = 'green' }
+        function tdCol8(e) { tdColor8.style.backgroundColor = 'purple' }
+        function tdCol9(e) { tdColor9.style.backgroundColor = 'orange' }
+        function tdCol10(e) { tdColor10.style.backgroundColor = 'indigo' }
+        function tdCol11(e) { tdColor11.style.backgroundColor = 'darkcyan' }
+        function tdCol12(e) { tdColor12.style.backgroundColor = 'black' }
+        function tdCol13(e) { tdColor13.style.backgroundColor = 'cyan' }
+        function tdCol14(e) { tdColor14.style.backgroundColor = 'gray' }
+        function tdCol15(e) { tdColor15.style.backgroundColor = 'green' }
+        function tdCol16(e) { tdColor16.style.backgroundColor = 'blue' }
+
 
     </script>
 </body>
@@ -124,6 +165,7 @@
         box-sizing: border-box;
         transition: 0.3s;
     }
+
     .top {
         text-align: center;
         padding: 50px 0;
@@ -137,16 +179,29 @@
         margin-top: 20px;
         cursor: pointer;
     }
-    .light { background-color: white; }
-    .violet { background-color: darkcyan; }
-    .indigo { background-color: indigo; }
-    .gray { background-color: gray; }
+
+    .light {
+        background-color: white;
+    }
+
+    .violet {
+        background-color: darkcyan;
+    }
+
+    .indigo {
+        background-color: indigo;
+    }
+
+    .gray {
+        background-color: red;
+    }
 
     img {
         border-radius: 20px;
         display: block;
         margin: 0 auto;
     }
+
     main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -157,25 +212,101 @@
         padding: 50px 0;
     }
 
-    .td1 {
+    .tdColor1 {
         width: 30px;
         height: 80px;
-        background-color: black;
+        background-color: red;
     }
-    .td2 {
+
+    .tdColor2 {
         width: 30px;
         height: 50px;
         background-color: red;
     }
-    .td3 {
+
+    .tdColor3 {
         width: 30px;
         height: 50px;
-        background-color: rgb(190, 190, 89);
+        background-color: red;
     }
-    .td4 {
+
+    .tdColor4 {
         width: 30px;
         height: 50px;
-        background-color: rgb(12, 207, 191);
+        background-color: red;
+    }
+
+    .tdColor5 {
+        width: 30px;
+        height: 80px;
+        background-color: red;
+    }
+
+    .tdColor6 {
+        width: 30px;
+        height: 80px;
+        background-color: red;
+    }
+
+    .tdColor7 {
+        width: 30px;
+        height: 80px;
+        background-color: red;
+    }
+
+    .tdColor8 {
+        width: 30px;
+        height: 80px;
+        background-color: red;
+    }
+
+    .tdColor9 {
+        width: 30px;
+        height: 80px;
+        background-color: red;
+    }
+
+    .tdColor10 {
+        width: 30px;
+        height: 80px;
+        background-color: red;
+    }
+
+    .tdColor11 {
+        width: 30px;
+        height: 80px;
+        background-color: red;
+    }
+
+    .tdColor12 {
+        width: 30px;
+        height: 80px;
+        background-color: red;
+    }
+
+    .tdColor13 {
+        width: 30px;
+        height: 80px;
+        background-color: red;
+    }
+
+    .tdColor14 {
+        width: 30px;
+        height: 80px;
+        background-color: red;
+    }
+
+    .tdColor15 {
+        width: 30px;
+        height: 80px;
+        background-color: red;
+    }
+
+    .tdColor16 {
+        width: 30px;
+        height: 80px;
+        background-color: red;
     }
 </style>
+
 </html>
