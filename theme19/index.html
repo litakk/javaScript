@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <p class="light">Light</p>
+        <div class="theme-switcher">
+            <input type="checkbox">
+            <span class="circle">☀️</span>
+        </div>
+        <p class="dark">Dark</p>
+    </div>
+
+    <div class="bottom-text">
+        <p class="left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, pariatur!</p>
+        <p class="right">Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты.</p>
+    </div>
+
+
+    <script>
+        const themeSwitcher = document.querySelector('.theme-switcher')
+        const circle = document.querySelector('.circle')
+        const lightP = document.querySelector('.light')
+        const darkP = document.querySelector('.dark')
+
+        const bottomLeftText = document.querySelector('.bottom-text .left')
+        const bottomRightText = document.querySelector('.bottom-text .right')
+
+        // ------------------------------------------------------------
+        themeSwitcher.onclick = toggleTheme
+        // ------------------------------------------------------------
+        function toggleTheme(e) {
+            const color = e.target.checked ? '#18A0FB50' : 'lightgoldenrodyellow'
+            themeSwitcher.style.backgroundColor = color
+            document.body.classList.toggle("dark-theme")
+
+            if (document.body.classList.contains("dark-theme")) {
+                circle.innerHTML = "🌙"
+                bottomRightText.style.opacity = '1'
+                bottomRightText.style.color = 'white'
+                bottomLeftText.style.opacity = '0'
+            } else {
+                circle.innerHTML = "☀️"
+                bottomRightText.style.opacity = '0'
+                bottomLeftText.style.opacity = '1'
+            }
+            activateAnimation()
+        }
+
+        function activateAnimation() {
+            darkP.style.opacity = '0'
+            lightP.style.opacity = '0'
+
+            if (document.body.classList.contains("dark-theme")) {
+                darkP.style.transform = 'translateY(0)'
+                darkP.style.opacity = '1'
+
+                lightP.style.transform = 'translateY(150px)'
+                lightP.style.opacity = '0'
+                setTimeout(() => {
+                    lightP.style.transform = 'translateY(-150px)'
+                }, 300)
+            } else {
+                lightP.style.transform = 'translateY(0)'
+                lightP.style.opacity = '1'
+
+                darkP.style.transform = 'translateY(150px)'
+                darkP.style.opacity = '0'
+
+                setTimeout(() => {
+                    darkP.style.transform = 'translateY(-150px)'
+                }, 300)
+            }
+        }
+    </script>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        transition: 0.3s;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .dark-theme {
+        background-color: black;
+    }
+
+    .container {
+        width: 100%;
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .theme-switcher {
+        width: 44px;
+        background-color: lightgoldenrodyellow;
+        height: 22px;
+        position: relative;
+        border-radius: 10px;
+    }
+
+    .theme-switcher input {
+        width: 44px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 22px;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .theme-switcher span {
+        display: block;
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+        background-color: darkkhaki;
+        position: relative;
+        left: 1px;
+    }
+
+    
+
+    .theme-switcher input:checked+span {
+        left: 22px;
+        background-color: #18A0FB;
+    }
+
+    p {
+        margin: 0 20px;
+    }
+
+    .light {
+        color: black;
+    }
+
+    .dark {
+        color: white;
+        transform: translateY(-150px);
+    }
+
+    .circle {
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        place-items: center;
+    }
+
+
+    .bottom-text {
+        text-align: center;
+        width: 100%;
+        position: relative;
+    }
+    .bottom-text .right {
+        opacity: 0;
+    }
+    .bottom-text p {
+        position: absolute;
+        text-align: center;
+        left: 10%;
+    }
+
+</style>
+
+</html>
