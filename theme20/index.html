@@ -30,16 +30,16 @@
             </tr>
 
             <tr>
-                <td class="button" data="7">4</td>
-                <td class="button" data="7">5</td>
-                <td class="button" data="7">6</td>
+                <td class="button" data="4">4</td>
+                <td class="button" data="5">5</td>
+                <td class="button" data="6">6</td>
             </tr>
 
 
             <tr>
-                <td class="button" data="7">1</td>
-                <td class="button" data="7">2</td>
-                <td class="button" data="7">3</td>
+                <td class="button" data="1">1</td>
+                <td class="button" data="2">2</td>
+                <td class="button" data="3">3</td>
             </tr>
 
             <tr>
@@ -52,6 +52,27 @@
     </main>
 
     <script>
+
+        const buttons = document.querySelectorAll('.button')
+        const resultDiv = document.querySelector('.result')
+
+        buttons.forEach(btn => {
+            btn.onclick = clickHandler
+        })
+
+
+
+        function clickHandler(e) {
+            const symbols = '+-*/'
+            let data = e.target.getAttribute('data')
+            let len = resultDiv.textContent.length // текст контент это означает то что там написанно
+            let last = resultDiv.textContent.chat(len-1)
+
+            if() {
+
+            }
+}
+
 
     </script>
 </body>
@@ -88,6 +109,11 @@
         text-align: center;
         cursor: pointer;
         width: 150px;
+    }
+
+    .button:active {
+        background-color: #333;
+        color: snow;
     }
 
     th.button {
