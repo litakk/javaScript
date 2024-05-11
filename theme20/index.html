@@ -12,19 +12,20 @@
     <main>
         <div class="result">0</div>
 
+        <div class="top-colspan">
+            <div class="button" data="+">+</div>
+            <div class="button" data="-">-</div>
+            <div class="button" data="*">*</div>
+            <div class="button" data="/">/</div>
+            <div class="button remove" data="<<">&leftarrow;</div>
+        </div>
+
         <table>
-            <tr>
-                <th class="button" data="+">+</th>
-                <th class="button" data="-">-</th>
-                <th class="button" data="*">*</th>
-                <th class="button" data="/">/</th>
-                <th class="button remove" data="<<">&leftarrow;</th>
-            </tr>
             <tr>
                 <td class="button" data="7">7</td>
                 <td class="button" data="8">8</td>
                 <td class="button" data="9">9</td>
-                <th class="button eq" rowspan="4" colspan="2" data="=">=</th>
+                <th class="button eq" rowspan="4" data="=">=</th>
             </tr>
             <tr>
                 <td class="button" data="4">4</td>
@@ -49,8 +50,9 @@
         const resultDiv = document.querySelector('.result')
         const clearButton = document.querySelector('.button.c')
         const eqButton = document.querySelector('.button.eq')
-        const backNum = document.querySelector('.remove')
+        const removeButton = document.querySelector('.button.remove')
         
+
         // ---------------------------------------------------
         buttons.forEach(btn => {
             btn.onclick = clickHandler
@@ -59,7 +61,7 @@
             const symbols = '+-*/.'
             let data = e.target.getAttribute('data')
             let len = resultDiv.textContent.length
-            let last = resultDiv.textContent.charAt(len - 1)
+            let last = resultDiv.textContent.charAt(len-1)
 
             if (symbols.includes(data) && symbols.includes(last)) {
                 // do nothing
@@ -71,19 +73,18 @@
                 }
             }
         }
-        clearButton.onclick = function (e) {
+        clearButton.onclick = function(e) {
             resultDiv.textContent = '0'
         }
-        eqButton.onclick = function (e) {
+        eqButton.onclick = function(e) {
             resultDiv.textContent = eval(resultDiv.textContent)
         }
-
-
-        backNum.onclick = function (e) {
-            let currentText = resultDiv.textContent
-            resultDiv.textContent = currentText.slice(0, -1)
+        removeButton.onclick = function (e) {
+            resultDiv.textContent = resultDiv.textContent.slice(0, -1)
+            if (resultDiv.textContent.length == 0) {
+                resultDiv.textContent = '0'
+            }
         }
-
     </script>
 </body>
 <style>
@@ -103,10 +104,12 @@
     table {
         background-color: #252525;
         border-radius: 0 0 10px 10px;
+        width: 700px;
     }
 
     .result {
         background-color: #252525;
+        width: 700px;
         color: snow;
         text-align: right;
         padding: 20px;
@@ -144,6 +147,21 @@
     td.zero {
         border-radius: 0 0 0 10px;
     }
-</style>
 
+    .top-colspan {
+        width: 700px;
+        display: grid;
+        border-left: 2px solid #252525;
+        border-right: 2px solid #252525;
+        grid-template-columns: repeat(5, 1fr);
+        font-size: 1.5em;
+    }
+    .top-colspan div {
+        background-color: lightgray;
+        border-left: 1px solid #252525;
+        border-right: 1px solid #252525;
+        text-align: center;
+        width: 100%;
+    }
+</style>
 </html>
