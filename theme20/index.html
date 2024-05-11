@@ -12,67 +12,77 @@
     <main>
         <div class="result">0</div>
 
-
         <table>
-
             <tr>
-                <th class="button" data="=">+</th>
+                <th class="button" data="+">+</th>
                 <th class="button" data="-">-</th>
                 <th class="button" data="*">*</th>
                 <th class="button" data="/">/</th>
+                <th class="button remove" data="<<">&leftarrow;</th>
             </tr>
-
             <tr>
                 <td class="button" data="7">7</td>
                 <td class="button" data="8">8</td>
                 <td class="button" data="9">9</td>
-                <th class="button eq" data="=" rowspan="4">=</th>
+                <th class="button eq" rowspan="4" colspan="2" data="=">=</th>
             </tr>
-
             <tr>
                 <td class="button" data="4">4</td>
                 <td class="button" data="5">5</td>
                 <td class="button" data="6">6</td>
             </tr>
-
-
             <tr>
                 <td class="button" data="1">1</td>
                 <td class="button" data="2">2</td>
                 <td class="button" data="3">3</td>
             </tr>
-
             <tr>
                 <td class="button zero" data="0">0</td>
                 <td class="button" data=".">.</td>
-                <td class="button" data="AC">AC</td>
+                <td class="button c" data="C">C</td>
             </tr>
         </table>
-
     </main>
 
     <script>
-
         const buttons = document.querySelectorAll('.button')
         const resultDiv = document.querySelector('.result')
-
+        const clearButton = document.querySelector('.button.c')
+        const eqButton = document.querySelector('.button.eq')
+        const backNum = document.querySelector('.remove')
+        
+        // ---------------------------------------------------
         buttons.forEach(btn => {
             btn.onclick = clickHandler
         })
-
-
-
         function clickHandler(e) {
-            const symbols = '+-*/'
+            const symbols = '+-*/.'
             let data = e.target.getAttribute('data')
-            let len = resultDiv.textContent.length // текст контент это означает то что там написанно
-            let last = resultDiv.textContent.chat(len-1)
+            let len = resultDiv.textContent.length
+            let last = resultDiv.textContent.charAt(len - 1)
 
-            if() {
-
+            if (symbols.includes(data) && symbols.includes(last)) {
+                // do nothing
+            } else {
+                if (len == 1 && last == '0') {
+                    resultDiv.textContent = data
+                } else {
+                    resultDiv.textContent += data
+                }
             }
-}
+        }
+        clearButton.onclick = function (e) {
+            resultDiv.textContent = '0'
+        }
+        eqButton.onclick = function (e) {
+            resultDiv.textContent = eval(resultDiv.textContent)
+        }
 
+
+        backNum.onclick = function (e) {
+            let currentText = resultDiv.textContent
+            resultDiv.textContent = currentText.slice(0, -1)
+        }
 
     </script>
 </body>
@@ -96,7 +106,7 @@
     }
 
     .result {
-        background-color: #333;
+        background-color: #252525;
         color: snow;
         text-align: right;
         padding: 20px;
@@ -120,7 +130,6 @@
         background-color: #808080;
         font-size: 1.5em;
         color: snow;
-
     }
 
     td.button {
