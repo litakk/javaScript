@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="result">0</div>
+
+
+        <table>
+
+            <tr>
+                <th class="button" data="=">+</th>
+                <th class="button" data="-">-</th>
+                <th class="button" data="*">*</th>
+                <th class="button" data="/">/</th>
+            </tr>
+
+            <tr>
+                <td class="button" data="7">7</td>
+                <td class="button" data="8">8</td>
+                <td class="button" data="9">9</td>
+                <th class="button eq" data="=" rowspan="4">=</th>
+            </tr>
+
+            <tr>
+                <td class="button" data="7">4</td>
+                <td class="button" data="7">5</td>
+                <td class="button" data="7">6</td>
+            </tr>
+
+
+            <tr>
+                <td class="button" data="7">1</td>
+                <td class="button" data="7">2</td>
+                <td class="button" data="7">3</td>
+            </tr>
+
+            <tr>
+                <td class="button zero" data="0">0</td>
+                <td class="button" data=".">.</td>
+                <td class="button" data="AC">AC</td>
+            </tr>
+        </table>
+
+    </main>
+
+    <script>
+
+    </script>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+
+    main {
+        margin: 50px auto;
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    table {
+        background-color: #252525;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .result {
+        background-color: #333;
+        color: snow;
+        text-align: right;
+        padding: 20px;
+        font-size: 1.5em;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .button {
+        padding: 20px;
+        text-align: center;
+        cursor: pointer;
+        width: 150px;
+    }
+
+    th.button {
+        background-color: #808080;
+        font-size: 1.5em;
+        color: snow;
+
+    }
+
+    td.button {
+        background-color: lightgray;
+    }
+
+    th.eq {
+        border-radius: 0 0 10px 0;
+        background-color: #F78764;
+    }
+
+    td.zero {
+        border-radius: 0 0 0 10px;
+    }
+</style>
+
+</html>

@@ -43,7 +43,7 @@
         // ------------------------------------------------------------
         themeSwitcher.onclick = toggleTheme
         // ------------------------------------------------------------
-        function toggleTheme(e) {
+        function toggleTheme(e) { // toggle - переключать - тему
             const color = e.target.checked ? '#18A0FB50' : 'lightgoldenrodyellow'
             themeSwitcher.style.backgroundColor = color
             document.body.classList.toggle("dark-theme")
@@ -74,7 +74,8 @@
                 setTimeout(() => {
                     lightP.style.transform = 'translateY(-150px)'
                 }, 300)
-            } else {ssdd
+            } else {
+                ssdd
                 lightP.style.transform = 'translateY(0)'
                 lightP.style.opacity = '1'
 
@@ -145,7 +146,7 @@
         left: 1px;
     }
 
-    
+
 
     .theme-switcher input:checked+span {
         left: 22px;
@@ -179,15 +180,16 @@
         width: 100%;
         position: relative;
     }
+
     .bottom-text .right {
         opacity: 0;
     }
+
     .bottom-text p {
         position: absolute;
         text-align: center;
         left: 10%;
     }
-
 </style>
 
 </html>
