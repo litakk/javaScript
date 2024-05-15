@@ -8,13 +8,69 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="item">
+            <button class="dislike-btn">Dislike</button>
+        </div>
+        <div class="item">
+            <button class="like-btn">Like</button>
+        </div>
 
+        <div class="item">
+            <span class="likes"></span>
+        </div>
 
-
+        <div class="item">
+            <span class="dislikes"></span>
+        </div>
+    </div>
 
     <script src="conspect21.html">
-
     </script>
 </body>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 50%;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .container .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        color: snow;
+        border-radius: 10px;
+    }
+
+    .like-btn { background-color: green; }
+    .dislike-btn {background-color: red; }
+
+    
+</style>
 
 </html>
