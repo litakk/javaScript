@@ -51,7 +51,7 @@
         const clearButton = document.querySelector('.button.c')
         const eqButton = document.querySelector('.button.eq')
         const removeButton = document.querySelector('.button.remove')
-        
+
 
         // ---------------------------------------------------
         buttons.forEach(btn => {
@@ -61,7 +61,7 @@
             const symbols = '+-*/.'
             let data = e.target.getAttribute('data')
             let len = resultDiv.textContent.length
-            let last = resultDiv.textContent.charAt(len-1)
+            let last = resultDiv.textContent.charAt(len - 1)
 
             if (symbols.includes(data) && symbols.includes(last)) {
                 // do nothing
@@ -73,10 +73,10 @@
                 }
             }
         }
-        clearButton.onclick = function(e) {
+        clearButton.onclick = function (e) {
             resultDiv.textContent = '0'
         }
-        eqButton.onclick = function(e) {
+        eqButton.onclick = function (e) {
             resultDiv.textContent = eval(resultDiv.textContent)
         }
         removeButton.onclick = function (e) {
@@ -156,6 +156,7 @@
         grid-template-columns: repeat(5, 1fr);
         font-size: 1.5em;
     }
+
     .top-colspan div {
         background-color: lightgray;
         border-left: 1px solid #252525;
@@ -164,4 +165,5 @@
         width: 100%;
     }
 </style>
+
 </html>
