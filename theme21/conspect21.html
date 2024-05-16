@@ -10,22 +10,27 @@
 <body>
     <div class="container">
         <div class="item">
-            <button class="dislike-btn">Dislike</button>
-        </div>
-        <div class="item">
             <button class="like-btn">Like</button>
         </div>
-
         <div class="item">
-            <span class="likes"></span>
+            <button class="dislike-btn">Dislike</button>
         </div>
 
         <div class="item">
-            <span class="dislikes"></span>
+            <span class="likes">0</span>
+        </div>
+
+        <div class="item">
+            <span class="dislikes">0</span>
         </div>
     </div>
 
     <script src="conspect21.html">
+
+const 
+const 
+const 
+const 
     </script>
 </body>
 
@@ -67,10 +72,17 @@
         border-radius: 10px;
     }
 
-    .like-btn { background-color: green; }
-    .dislike-btn {background-color: red; }
+    .like-btn {
+        background-color: green;
+    }
 
-    
+    .dislike-btn {
+        background-color: red;
+    }
+
+    button:active {
+        transform: scale(0.7);
+    }
 </style>
 
 </html>

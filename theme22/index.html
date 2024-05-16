@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="left">
+            <img src="Мост.jpg" width="100%">
+            <img src="Закат.jpg" width="100%">
+            <img src="Город.jpg" width="100%">
+        </div>
+        <div class="right">
+            <img src="Цветы.jpg" width="100%">
+        </div>
+    </main>
+
+    <script>
+
+        const leftImgs = document.querySelector('.left img')
+        const rightImgs = document.querySelector('.left img')
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        leftImgs.forEach(leftImgs => {
+            leftImg.onclick = function () {
+                setTimeout(() => {
+                    rightImgs.src = leftImg.src
+                    rightImgs.style.opacity = 1
+                }, 300)
+            }
+        })
+
+    </script>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #333;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: 70%;
+        margin: 0 auto;
+        border-radius: 10px;
+        height: 70vh;
+    }
+
+    img {
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .left img {
+        display: block;
+        height: calc(70vh / 3);
+    }
+
+    .right img {
+        display: block;
+        height: 70vh;
+    }
+</style>
+
+</html>
