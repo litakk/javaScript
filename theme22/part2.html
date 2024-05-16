@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <div>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <hr>
+    <table>
+        <tr>
+            <th colspan="3">Users</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Image</th>
+        </tr>
+    </table>
+    
+    <button class="changeColor">Change Color</button>
+    <script>
+
+        const textInput = document.querySelector('input[type="text"]')
+        const emailInput = document.querySelector('input[type="email"]')
+        const submitBtn = document.querySelector('button')
+        const table = document.querySelector('table')
+
+        const changeColors = document.querySelector('changeColor')
+
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+        submitBtn.onclick = clickHandler
+
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+        function clickHandler(e) {
+            if (textInput.value === '0' || emailInput.value === '') return
+            e.preventDefault() // если мы ничего не напишем в инпуты он будет ругаться и просить заполнить инпут
+            table.style.display = 'table'
+
+            const tr = `
+            <tr>
+                <th>${textInput.value}</th>
+                <th>${emailInput.value}</th>
+                <th> <img src="Мост.jpg" width="100%"> </th>
+             <td>  <button class="changeColor">Change Color</button></td>
+            </tr>`
+        }
+
+    </script>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        transition: 0.3s;
+        text-align: center;
+    }
+
+    input,
+    button {
+        border-radius: 10px;
+        padding: 10px 20px;
+        outline: none;
+        border: none;
+        background-color: lightgray;
+        display: inline-block;
+        margin: 20px 5px;
+    }
+
+    input:focus {
+        padding: 10px 25px;
+        background-color: green;
+        color: snow;
+    }
+
+    button {
+        background-color: green;
+        color: snow;
+    }
+
+    button:hover {
+        background-color: darkgreen;
+    }
+
+    table {
+        width: 80%;
+        margin: 20px auto;
+        display: none;
+    }
+
+    th,
+    td {
+        padding: 10px 20px;
+        background-color: lightgray;
+    }
+</style>
+
+</html>

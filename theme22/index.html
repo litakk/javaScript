@@ -12,30 +12,27 @@
     <main>
         <div class="left">
             <img src="Мост.jpg" width="100%">
-            <img src="Закат.jpg" width="100%">
-            <img src="Город.jpg" width="100%">
+            <img src="" width="100%">
+            <img src="" width="100%">
         </div>
         <div class="right">
-            <img src="Цветы.jpg" width="100%">
+            <img src="" width="100%">
         </div>
     </main>
 
     <script>
-
-        const leftImgs = document.querySelector('.left img')
-        const rightImgs = document.querySelector('.left img')
-
-        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-        leftImgs.forEach(leftImgs => {
-            leftImg.onclick = function () {
+        const левыеКартинки = document.querySelectorAll('.left img');
+        const праваяКартинка = document.querySelector('.right img');
+        // ------------------------------------------------------------
+        левыеКартинки.forEach(леваяКартинка => {
+            леваяКартинка.onclick = function () {
+                праваяКартинка.style.opacity = 0
                 setTimeout(() => {
-                    rightImgs.src = leftImg.src
-                    rightImgs.style.opacity = 1
+                    праваяКартинка.src = леваяКартинка.src
+                    праваяКартинка.style.opacity = 1
                 }, 300)
             }
         })
-
     </script>
 </body>
 <style>
@@ -43,7 +40,7 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        transition: 0.5s;
+        transition: 0.3s;
     }
 
     body {
@@ -71,6 +68,10 @@
     .left img {
         display: block;
         height: calc(70vh / 3);
+        filter: grayscale(100%);
+    }
+    .left img:hover {
+        filter: none;
     }
 
     .right img {
