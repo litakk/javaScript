@@ -17,14 +17,44 @@
         </div>
         <div class="form-control">
             <label for="password">Password</label>
-            <input id="password" type="password" placeholder="Password">
+            <input id="password" type="password" placeholder="Password" minlength="8" maxlength="12">
             <p class="error"></p>
         </div>
         <div class="form-control">
-            <button type="submit">Submit</button>
-            <button type="submit">Reset</button>
+            <button class="btn-submit" type="submit">Submit</button>
+            <button class="btn-reset" type="reset">Reset</button>
         </div>
     </form>
+
+    <script>
+
+        submitBtn.onclick = submitForm
+        resetBtn.onclick = resetForm
+        inputUsername.output = validateInputUsername
+        inputPassword.output = validateInputPassword
+
+        function submitBtn(e) {
+            e.preventDefault()
+            console.log('submit')
+        }
+        function resetForm(e) {
+            console.log('reset')
+        }
+        function validateInputUsername(e) {
+            console.log('username changed')
+            const val = e.target.value
+            const fieldError = e.target.nextElementSibling
+
+
+            if (symbol.includes(val[val.lenght - 1])) {
+                
+            }
+        }
+        function validateInputPassword(e) {
+            console.log('password changed')
+        }
+
+    </script>
 
 </body>
 <style>
