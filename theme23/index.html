@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <div class="form-control">
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="Username">
+        </div>
+        <div class="form-control">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Password">
+        </div>
+        <div class="form-control">
+            <button type="submit">
+                Submit
+            </button>
+        </div>
+    </form>
+
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+    form {
+        width: 50%;
+        margin: 100px auto;
+        background-color: #DBE3FF;
+        padding: 50px 10px 20px 10px;
+        border-radius: 10px;
+    }
+    .form-control {
+        margin: 10px 0;
+    }
+    .form-control * {
+        margin: 5px 0;
+    }
+    input, button {
+        padding: 10px 20px;
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+    input:focus {
+        background-color: white;
+    }
+    button:hover {
+        background-color: green;
+        color: snow;
+        cursor: pointer;
+    }
+
+</style>
+</html>
