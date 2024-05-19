@@ -10,8 +10,12 @@
 <body>
 
     <main>
-        <div class="left"></div>
-        <div class="right"></div>
+        <div class="left">
+            <img src="image.png" alt="Not Found">
+        </div>
+        <div class="right">
+
+        </div>
     </main>
 
     <script>
@@ -19,12 +23,29 @@
     </script>
 </body>
 <style>
-* {
-    padding: 0;
-    margin: 0;
-    transition: 0.3;
-    box-sizing: border-box;
-}
+    * {
+        padding: 0;
+        margin: 0;
+        transition: 0.3;
+        box-sizing: border-box;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left {
+        padding: 0;
+    }
+
+    .right {
+        background-color: rgb(101, 99, 99)
+    }
+
+    img {
+        width: 100%;
+    }
 </style>
 
 </html>
